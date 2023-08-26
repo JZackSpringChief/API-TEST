@@ -92,3 +92,42 @@ function lessThanFive(number) {
 
 const result3 = lessThanFive(10);
 console.log(result3);
+
+function myFunc() {
+  console.log("this is a func");
+}
+myFunc();
+
+function dayRoutine() {
+  console.log("one display statement");
+}
+dayRoutine();
+
+function checkPoints() {
+  const points = 7;
+  const required = 10;
+  console.log("Requirement reached");
+  console.log(points > required);
+}
+checkPoints();
+
+// function doorBellCamera(enabled) {
+//   enabled = "Monitoring: ";
+//   console.log(enabled);
+// }
+// doorBellCamera(true);
+
+//above is wrong
+
+// should be
+
+function doorBellCamera(enabled) {
+  console.log("Monitoring: " + enabled);
+}
+doorBellCamera(true);
+
+function accomType(type) {
+  const rating = "5 star";
+  console.log(rating + " " + type);
+}
+accomType();
