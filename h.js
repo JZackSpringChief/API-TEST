@@ -77,3 +77,18 @@ function userAge2(number) {
 }
 const result = userAge2(29);
 console.log(result);
+
+function userAge3(number) {
+  const age = "User age: " + number;
+  // return age; without return value we get back "undefined"
+}
+const result2 = userAge3(29);
+console.log(result2);
+
+function lessThanFive(number) {
+  const lessThan = number < 5;
+  return lessThan;
+}
+
+const result3 = lessThanFive(10);
+console.log(result3);
