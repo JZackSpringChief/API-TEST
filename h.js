@@ -64,3 +64,16 @@ const todos = ["study", "chores", "meditate"];
 const remove = todos.pop();
 const leftToDo = todos.length;
 console.log(`You have ${leftToDo} items left to do.`);
+
+function userAge(number) {
+  const age = "User Age: " + number;
+  return age;
+}
+console.log(userAge(22));
+
+function userAge2(number) {
+  const age = "User age: " + number;
+  return age;
+}
+const result = userAge2(29);
+console.log(result);
