@@ -154,3 +154,34 @@ function displayCash(amount) {
   return amount + " Rubles";
 }
 console.log(displayCash(500));
+
+// const author = "J<D";
+
+// displayAuthor(author);
+
+function displayNames(names) {
+  console.log(names);
+}
+
+const students = ["Laurel", "Yanni"];
+displayNames(students);
+
+function getBMI(height, weight) {
+  return weight / (height * height);
+}
+const bmi = getBMI(1.7, 70);
+console.log(bmi);
+
+function printMsg(first, second, third) {
+  console.log(first + " " + second + " " + third);
+}
+const result6 = printMsg("Hello", "World", "!");
+
+function calculateDifference(a, b) {
+  return a - b;
+}
+
+function calculateSum(a, b) {
+  return a + b;
+}
+console.log(calculateSum(30, 11));
