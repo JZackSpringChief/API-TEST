@@ -131,3 +131,26 @@ function accomType(type) {
   console.log(rating + " " + type);
 }
 accomType();
+
+function displayTheNumber(number) {
+  return "The number is " + number;
+}
+console.log(displayTheNumber(50));
+
+function addGreeting(user) {
+  const greeting = "Greetings " + user;
+  return greeting;
+}
+const result5 = addGreeting("Alex");
+console.log(result5);
+
+function lessThanFive(number) {
+  const lessThan = number < 5;
+  return lessThan;
+}
+console.log(lessThanFive(4));
+
+function displayCash(amount) {
+  return amount + " Rubles";
+}
+console.log(displayCash(500));
