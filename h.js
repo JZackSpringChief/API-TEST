@@ -382,8 +382,29 @@ console.log("fixed!");
 // let tajMahal = JSON.parse(tajMahalJSON);
 // console.log(tajMahal.takeout);
 
-const tajMahal = {
-  cuisine: "Indian",
-  takeout: false,
-  starRating: 4.5,
-};
+// const tajMahal = {
+//   cuisine: "Indian",
+//   takeout: false,
+//   starRating: 4.5,
+// };
+// this.takeout = true;
+// console.log(this.takeout);
+
+// const tajMahal = {
+//   cuisine: "Indian",
+//   takeout: false,
+//   starRating: 4.5,
+// };
+// tajMahal.takeout = true;
+// console.log(tajMahal);
+// const stringTajMahal = JSON.stringify(tajMahal);
+// console.log(stringTajMahal);
+
+const tajMahalJSON =
+  '{ "cuisine": "Indian", "takeout": false, "starRating": 4.5}';
+
+const tajMahal = JSON.parse(tajMahalJSON);
+
+const tenRating = tajMahal.starRating * 2;
+
+console.log(tenRating);
