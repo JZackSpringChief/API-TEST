@@ -224,3 +224,20 @@ function lessThanOrEqualToZero(number) {
   return false;
 }
 console.log(lessThanOrEqualToZero(3));
+
+const microwave = {
+  brand: "samsung",
+  heat: function () {},
+};
+
+const oven = {
+  brand: "micro",
+  on: true,
+  isOn: function () {
+    return this.on;
+  },
+};
+
+const flower = '{"name": "tulip", "petals": 30, "city": "Amsterdam"}';
+const flowerConversion = JSON.parse(flower);
+console.log(flowerConversion.name);
