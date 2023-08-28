@@ -241,3 +241,27 @@ const oven = {
 const flower = '{"name": "tulip", "petals": 30, "city": "Amsterdam"}';
 const flowerConversion = JSON.parse(flower);
 console.log(flowerConversion.name);
+
+const order = {
+  itemName: "Candy",
+  itemPrice: 2,
+  itemQuantity: 10,
+  available: true,
+};
+
+console.log(order.available);
+
+const car = {
+  make: "Toyota",
+  model: "Camry",
+};
+console.log(car);
+
+const coffee = {
+  origin: "Nicaragua",
+  bean: "Arabica",
+  roast: "Dark",
+  price: 2.99,
+};
+coffee.price = 3.99;
+console.log("Coffee Price: " + coffee.price);
