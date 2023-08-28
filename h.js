@@ -265,3 +265,125 @@ const coffee = {
 };
 coffee.price = 3.99;
 console.log("Coffee Price: " + coffee.price);
+
+// const employee = {
+//   name: "Jim Halpert",
+//   title: "Salesman",
+//   sellPaper: function () {
+//     return "Would you like to buy some paper?";
+//   },
+// };
+
+// const employee = {
+//   name: "Jim Halpert",
+//   title: "Salesman",
+//   sellPaper: function () {
+//     console.log("Would you like to buy some paper?");
+//   },
+// };
+// employee.sellPaper();
+
+const employee = {
+  name: "Jim Halpert",
+  title: "Salesman",
+  displayName: function () {
+    console.log(this.name);
+  },
+};
+employee.displayName();
+
+const employee2 = {
+  name: "Jim Halpert",
+  title: "Salesman",
+  displayTitle: function () {
+    console.log(this.title);
+  },
+};
+employee2.displayTitle();
+const dog = {
+  name: "Ralph",
+  age: 7,
+  breed: "Golden Retriever",
+  ageUp: function () {
+    dog.age = 8;
+    console.log(this.age);
+  },
+};
+dog.ageUp();
+
+const apartment = {
+  number: 404,
+  location: "unknown",
+  display: function () {
+    console.log("Display");
+  },
+};
+
+apartment.display();
+
+const apartment1 = {
+  number: 404,
+  location: "unknown",
+  display: function () {
+    apartment1.number = 200;
+    console.log(this.number);
+  },
+};
+apartment1.display();
+console.log("apartment location: " + apartment1.location);
+
+const apartment2 = {
+  number: 404,
+  location: "unknown",
+  display: function () {
+    console.log(this.number);
+  },
+};
+apartment2.display();
+
+const jsonString = '{"sport": "basketball", "players": 5, "duration": 48}';
+const obj = JSON.parse('{"sport": "basketball", "players": 5, "duration": 48}');
+console.log(obj.sport.toUpperCase());
+
+const book = {
+  title: "Wild Life",
+  author: "Vera Storm",
+  pages: 289,
+};
+
+const stringBook = JSON.stringify(book);
+console.log(stringBook);
+
+let toy1 = {
+  name: "Blocks",
+  price: 19.99,
+  age_range: "6-12",
+};
+let toy2 = {
+  name: "Stuffed Bear",
+  price: 29.99,
+  age_range: "0-3",
+};
+let stringToy1 = JSON.stringify(toy1);
+let stringToy2 = JSON.stringify(toy2);
+
+console.log(stringToy1);
+console.log(stringToy2);
+
+const flower1 =
+  '{"name": "Rose", "color": "blue", "price": 2.5, "season": "spring"}';
+let flowerObject = JSON.parse(flower1);
+flowerObject.color = "red";
+console.log(flower1);
+let fixedFlowerJson = JSON.stringify(flowerObject);
+console.log("fixed!");
+
+// const tajMahalJSON = '{ "cuisine": "Indian", "takeout": false}';
+// let tajMahal = JSON.parse(tajMahalJSON);
+// console.log(tajMahal.takeout);
+
+const tajMahal = {
+  cuisine: "Indian",
+  takeout: false,
+  starRating: 4.5,
+};
