@@ -185,3 +185,42 @@ function calculateSum(a, b) {
   return a + b;
 }
 console.log(calculateSum(30, 11));
+
+function hasTheSameColor(colorsArray, color) {
+  let isTheSameColor = false;
+  for (let i = 0; i < colorsArray.length; i++) {
+    if (colorsArray[i] === color) {
+      isTheSameColor = true;
+    }
+  }
+  return isTheSameColor;
+}
+console.log(hasTheSameColor(["green", "red", "black"], "black"));
+
+function getArrayLength(inputArr) {
+  return inputArr.length;
+}
+console.log("Length of array: " + getArrayLength([1, 25, 3, 5]));
+
+function firstValue(array) {
+  return array[0];
+}
+console.log("The first value is: " + firstValue([1, 2, 3, 4]));
+
+function toSeconds(hours, minutes) {
+  return (hours * 60 + minutes) * 60;
+}
+console.log(toSeconds(5, 2));
+
+// Code a function that returns  t⁠r⁠u⁠e⁠  if the  n⁠u⁠m⁠b⁠e⁠r⁠  parameter is less than or equal to 0. Otherwise, return  f⁠a⁠l⁠s⁠e⁠ .
+// Examples:
+//  l⁠e⁠s⁠s⁠T⁠h⁠a⁠n⁠O⁠r⁠E⁠q⁠u⁠a⁠l⁠T⁠o⁠Z⁠e⁠r⁠o⁠(⁠7⁠)⁠  returns  f⁠a⁠l⁠s⁠e⁠ .
+//  l⁠e⁠s⁠s⁠T⁠h⁠a⁠n⁠O⁠r⁠E⁠q⁠u⁠a⁠l⁠T⁠o⁠Z⁠e⁠r⁠o⁠(⁠-⁠5⁠)⁠  returns  t⁠r⁠u⁠e⁠ .
+
+function lessThanOrEqualToZero(number) {
+  if (number <= 0) {
+    return true;
+  }
+  return false;
+}
+console.log(lessThanOrEqualToZero(3));
