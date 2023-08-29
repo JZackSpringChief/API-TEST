@@ -408,3 +408,17 @@ const tajMahal = JSON.parse(tajMahalJSON);
 const tenRating = tajMahal.starRating * 2;
 
 console.log(tenRating);
+
+function checkSeniorDiscount(age) {
+  if (age >= 65) {
+    console.log(age + " years old recieves 50% off");
+  }
+}
+checkSeniorDiscount(65);
+
+function checkGreater(a, b) {
+  if (a >= b) {
+    console.log(a + " is greater than or equal to " + b);
+  }
+}
+checkGreater(13, 13);
