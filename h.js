@@ -422,3 +422,13 @@ function checkGreater(a, b) {
   }
 }
 checkGreater(13, 13);
+
+function guessNum(a, b) {
+  if (a <= 9) {
+    console.log("lucky guess");
+  } else {
+    b >= 10;
+    console.log("WRONG");
+  }
+}
+guessNum(11);
