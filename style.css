@@ -1,13 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@700&family=Quicksand:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
 body {
-  background-color: azure;
+  background-color: whitesmoke;
   text-align: center;
-  font-family: "Merriweather Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+  display: grid;
+}
+
+form {
+  width: 80%;
+  margin: auto;
 }
 
 h2 {
-  background-color: gold;
   padding: 10px;
 }
 
@@ -15,6 +20,10 @@ input {
   padding: 10px;
   margin: 10px;
   font-family: Quicksand;
+}
+
+label {
+  margin: 10px;
 }
 
 button {
