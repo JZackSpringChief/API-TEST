@@ -32,3 +32,8 @@ button {
   border: none;
   color: white;
 }
+.first {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
