@@ -42,8 +42,3 @@ button {
   border: solid 2px #298374;
   flex-direction: column;
 }
-.butt {
-  position: relative;
-  top: 70px;
-  display: inline;
-}

@@ -436,7 +436,3 @@ guessNum(11);
 function makeBigger() {
   let word = word.toString();
 }
-
-var variable = "string";
-let leta = "string";
-const constant = "string";
