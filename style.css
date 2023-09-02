@@ -44,5 +44,6 @@ button {
 }
 .butt {
   position: relative;
-  top: 30px;
+  top: 70px;
+  display: inline;
 }
