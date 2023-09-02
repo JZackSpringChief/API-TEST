@@ -432,3 +432,7 @@ function guessNum(a, b) {
   }
 }
 guessNum(11);
+
+function makeBigger() {
+  let word = word.toString();
+}

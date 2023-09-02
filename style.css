@@ -37,3 +37,10 @@ button {
   bottom: 10px;
   left: 10px;
 }
+.container {
+  flex: auto;
+}
+.butt {
+  position: relative;
+  top: 30px;
+}
