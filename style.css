@@ -1,10 +1,15 @@
-.home {
-  flex-grow: 1;
+.one {
+  background-color: #ff97a1;
+}
+
+.two {
+  background-color: #ffc86e;
 }
 
 .item {
-  background-color: #ff97a1;
-  margin: 1px;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
 }
 
 .container {
