@@ -1,16 +1,14 @@
-.container {
+body {
   background-color: #3e416d;
-  display: flex;
 }
 
-.item {
-  height: 50px;
-  width: 50px;
+a {
+  text-align: center;
   background-color: #62d76b;
-  margin: 5px;
-  flex-grow: 1;
+  border: 5px solid indigo;
 }
 
-#item-2 {
-  flex-grow: 4;
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
