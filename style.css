@@ -1,16 +1,16 @@
-.blue {
-  background-color: blue;
+.one {
+  background-color: #ff97a1;
 }
 
-.square {
-  width: 150px;
-  height: 150px;
+.two {
+  background-color: #ffc86e;
 }
 
-#shapes {
-  border: 1px dotted blue;
-  height: 300px;
+.item {
+  flex-basis: auto;
+}
+
+.container {
+  border: solid 1px #d37947;
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
 }
