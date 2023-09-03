@@ -1,18 +1,12 @@
-.one {
-  background-color: #ff97a1;
-}
-
-.two {
-  background-color: #ffc86e;
+.container {
+  background-color: #3e416d;
+  display: flex;
 }
 
 .item {
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
-}
-
-.container {
-  border: solid 1px #d37947;
-  display: flex;
+  height: 50px;
+  width: 50px;
+  background-color: #62d76b;
+  margin: 5px;
+  flex-grow: 1;
 }
