@@ -1,14 +1,16 @@
-.green {
-  background-color: green;
+.blue {
+  background-color: blue;
 }
 
-.circle {
+.square {
   width: 150px;
   height: 150px;
-  border-radius: 50%;
 }
 
 #shapes {
+  border: 1px dotted blue;
+  height: 300px;
   display: flex;
   justify-content: center;
+  align-items: flex-end;
 }
