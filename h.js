@@ -556,3 +556,37 @@ function findLanguage(languages, language) {
   }
 }
 findLanguage(languages, "JavaScript");
+
+const prices = [100, 150, 200];
+const discounts = [0.1, 0.2, 0.25];
+
+function getValues(prices, discounts) {
+  let values = [];
+  for (let i = 0; i < prices.length; i++) {
+    //code here ZACK!!! multiply prices array in discounts and store in values
+  }
+  console.log(values);
+}
+getValues(prices, discounts);
+
+function milesToKm(miles) {
+  const km = (miles / 5) * 8;
+  return km;
+}
+
+milesToKm(70);
+
+const group = 4;
+const total = 500;
+const minimum = 150;
+
+function stockCheck(groupSize, totalAvailable, minPerUser) {
+  if (minPerUser > totalAvailable) {
+    return "Insufficient for one user";
+  } else if (groupSize * minPerUser > totalAvailable) {
+    return "Insufficient for all users";
+  } else {
+    return "Sufficient for all users";
+  }
+}
+console.log(stockCheck(group, total, minimum));
