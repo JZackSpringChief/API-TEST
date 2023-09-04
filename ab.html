@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
   <body>
-    <h1 id="newspaper">Thee Springfield Shopper</h1>
+    <h3>Coffee Guide</h3>
+    <button onclick="recipe()">Give me the recipe!</button>
+    <p id="coffee"></p>
     <script>
-      document.getElementById("newspaper").innerHTML =
-        "The Springfield Shopper";
+      function recipe() {
+        document.getElementById("coffee").innerHTML =
+          "Americano: 1 shot esspresso, hot water";
+      }
     </script>
   </body>
 </html>
