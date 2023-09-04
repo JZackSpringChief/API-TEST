@@ -520,3 +520,39 @@ function displayAlert(message) {
 }
 
 displayAlert("I will practice Javascript");
+
+function countGingerBeers(message) {
+  for (let i = 10; i > 0; i--) {
+    console.log(i + message);
+  }
+}
+
+countGingerBeers(" bottles of ginger beer on the wall");
+
+function printNumbers(numbers) {
+  console.log(numbers);
+}
+printNumbers([1, 2, 3]);
+
+const names = ["John", "Adam", "Sarah"];
+
+function printEachName(names) {
+  for (let i = 0; i < names.length; i++) {
+    console.log(names[i]);
+  }
+}
+printEachName(names);
+
+const languages = ["JavaScript", "C++", "Python"];
+
+function findLanguage(languages, language) {
+  for (let i = 0; i < languages.length; i++) {
+    if (language == "JavaScript") {
+      console.log(language + " found!");
+      break;
+    } else {
+      console.log(language + " does not exist or has not been found yet!.");
+    }
+  }
+}
+findLanguage(languages, "JavaScript");
