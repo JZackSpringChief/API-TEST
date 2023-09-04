@@ -51,8 +51,14 @@
 //   output.innerHTML = "You have " + el.length + " urgent tasks";
 // }
 
+// function answer() {
+//   const el = document.getElementsByClassName("year");
+//   const output = document.querySelector("#output");
+//   output.innerHTML = el[0].innerHTML;
+// }
+
 function answer() {
-  const el = document.getElementsByClassName("year");
+  const el = document.getElementsByClassName("city answer");
   const output = document.querySelector("#output");
   output.innerHTML = el[0].innerHTML;
 }
