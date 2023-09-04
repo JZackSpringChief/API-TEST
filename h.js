@@ -746,7 +746,52 @@ const ucStates = lcStates.map((ele) => ele.toUpperCase());
 console.log(ucStates);
 
 //add element to the correct params
-const gallons = [1.2, 4.5, 3.2];
-const liters = gallons.map(function () {
-  return element * 3.8;
+// const gallons = [1.2, 4.5, 3.2];
+// const liters = gallons.map(function () {
+//   return element * 3.8;
+// });
+
+const ratios = [0.79, 0.88, 0.68, 0.95];
+const percentages = ratios.map(function (element) {
+  return element * 100 + "%";
 });
+
+console.log(percentages);
+
+const states = ["Alaska", "Maryland", "Pennsylvania", "Alabama", "Arkansas"];
+const A = states.filter(function (ele) {
+  return ele[0] == "A";
+});
+console.log(A);
+
+//add two params to get result of last quater of the year
+const months = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+const q4 = months.filter(function (ele) {
+  return ele[0] > 8;
+});
+console.log(q4);
+
+const heights = [66, 75, 73, 56, 62];
+const tall = heights.filter((index) => {
+  return index > 72;
+});
+console.log(tall);
+
+const names = ["Tony", "Tania", "Vince", "Terry"];
+const list = names.reduce(function (prev, curr) {
+  return prev + ", " + curr;
+});
+console.log(list);
