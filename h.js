@@ -492,189 +492,248 @@
 // }
 // displayNumbers(" say this ten times from 0");
 
-const num = [91, 66, 77, 84, 66];
-const search = 66;
+// const num = [91, 66, 77, 84, 66];
+// const search = 66;
 
-function searchGrade(num, search) {
-  for (let i = 0; i < num.length; i++) {
-    if (num[i] === search) {
-      const superSecretMessage = "You're a lil bitch!";
-      console.log(superSecretMessage);
-      break;
-    }
-  }
-}
-searchGrade(num, search);
+// function searchGrade(num, search) {
+//   for (let i = 0; i < num.length; i++) {
+//     if (num[i] === search) {
+//       const superSecretMessage = "You're a lil bitch!";
+//       console.log(superSecretMessage);
+//       break;
+//     }
+//   }
+// }
+// searchGrade(num, search);
 
-function displayNumbers() {
-  for (let i = 3; i <= 9; i++) {
-    console.log(i);
-  }
-}
+// function displayNumbers() {
+//   for (let i = 3; i <= 9; i++) {
+//     console.log(i);
+//   }
+// }
 
-displayNumbers();
-function displayAlert(message) {
-  for (let i = 0; i < 5; i++) {
-    console.log(message);
-  }
-}
+// displayNumbers();
+// function displayAlert(message) {
+//   for (let i = 0; i < 5; i++) {
+//     console.log(message);
+//   }
+// }
 
-displayAlert("I will practice Javascript");
+// displayAlert("I will practice Javascript");
 
-function countGingerBeers(message) {
-  for (let i = 10; i > 0; i--) {
-    console.log(i + message);
-  }
-}
+// function countGingerBeers(message) {
+//   for (let i = 10; i > 0; i--) {
+//     console.log(i + message);
+//   }
+// }
 
-countGingerBeers(" bottles of ginger beer on the wall");
+// countGingerBeers(" bottles of ginger beer on the wall");
 
-function printNumbers(numbers) {
-  console.log(numbers);
-}
-printNumbers([1, 2, 3]);
+// function printNumbers(numbers) {
+//   console.log(numbers);
+// }
+// printNumbers([1, 2, 3]);
 
-const names = ["John", "Adam", "Sarah"];
+// const names = ["John", "Adam", "Sarah"];
 
-function printEachName(names) {
-  for (let i = 0; i < names.length; i++) {
-    console.log(names[i]);
-  }
-}
-printEachName(names);
+// function printEachName(names) {
+//   for (let i = 0; i < names.length; i++) {
+//     console.log(names[i]);
+//   }
+// }
+// printEachName(names);
 
-const languages = ["JavaScript", "C++", "Python"];
+// const languages = ["JavaScript", "C++", "Python"];
 
-function findLanguage(languages, language) {
-  for (let i = 0; i < languages.length; i++) {
-    if (language == "JavaScript") {
-      console.log(language + " found!");
-      break;
-    } else {
-      console.log(language + " does not exist or has not been found yet!.");
-    }
-  }
-}
-findLanguage(languages, "JavaScript");
+// function findLanguage(languages, language) {
+//   for (let i = 0; i < languages.length; i++) {
+//     if (language == "JavaScript") {
+//       console.log(language + " found!");
+//       break;
+//     } else {
+//       console.log(language + " does not exist or has not been found yet!.");
+//     }
+//   }
+// }
+// findLanguage(languages, "JavaScript");
 
-const prices = [100, 150, 200];
-const discounts = [0.1, 0.2, 0.25];
+// const prices = [100, 150, 200];
+// const discounts = [0.1, 0.2, 0.25];
 
-function getValues(prices, discounts) {
-  let values = [];
-  for (let i = 0; i < prices.length; i++) {
-    //code here ZACK!!! multiply prices array in discounts and store in values
-  }
-  console.log(values);
-}
-getValues(prices, discounts);
+// function getValues(prices, discounts) {
+//   let values = [];
+//   for (let i = 0; i < prices.length; i++) {
+//     //code here ZACK!!! multiply prices array in discounts and store in values
+//   }
+//   console.log(values);
+// }
+// getValues(prices, discounts);
 
-function milesToKm(miles) {
-  const km = (miles / 5) * 8;
-  return km;
-}
+// function milesToKm(miles) {
+//   const km = (miles / 5) * 8;
+//   return km;
+// }
 
-milesToKm(70);
+// milesToKm(70);
 
-const group = 4;
-const total = 500;
-const minimum = 150;
+// const group = 4;
+// const total = 500;
+// const minimum = 150;
 
-function stockCheck(groupSize, totalAvailable, minPerUser) {
-  if (minPerUser > totalAvailable) {
-    return "Insufficient for one user";
-  } else if (groupSize * minPerUser > totalAvailable) {
-    return "Insufficient for all users";
-  } else {
-    return "Sufficient for all users";
-  }
-}
-console.log(stockCheck(group, total, minimum));
+// function stockCheck(groupSize, totalAvailable, minPerUser) {
+//   if (minPerUser > totalAvailable) {
+//     return "Insufficient for one user";
+//   } else if (groupSize * minPerUser > totalAvailable) {
+//     return "Insufficient for all users";
+//   } else {
+//     return "Sufficient for all users";
+//   }
+// }
+// console.log(stockCheck(group, total, minimum));
 
-const decloration = () => "im the best";
-console.log(decloration());
+// const decloration = () => "im the best";
+// console.log(decloration());
 
-const winningNumber = Math.floor(Math.random());
+// const winningNumber = Math.floor(Math.random());
 
-function drawWinningNumber() {
-  return winningNumber * 3;
-}
+// function drawWinningNumber() {
+//   return winningNumber * 3;
+// }
 
-function drawWinner() {
-  const players = ["Amanda", "Sheila", "Rob"];
-  const winner = players[winningNumber];
-  console.log("The winner is " + winner);
-}
-drawWinner();
+// function drawWinner() {
+//   const players = ["Amanda", "Sheila", "Rob"];
+//   const winner = players[winningNumber];
+//   console.log("The winner is " + winner);
+// }
+// drawWinner();
 
-const toDoList = ["sweeping", "washing", "mopping"];
+// const toDoList = ["sweeping", "washing", "mopping"];
 
-function cleanUp() {
-  for (let i = 0; i < toDoList.length; i++) {
-    toDoList.pop(toDoList[i]);
-  }
-  console.log("I still have some " + toDoList + " to do");
-}
-cleanUp();
+// function cleanUp() {
+//   for (let i = 0; i < toDoList.length; i++) {
+//     toDoList.pop(toDoList[i]);
+//   }
+//   console.log("I still have some " + toDoList + " to do");
+// }
+// cleanUp();
 
-const favoriteIceCream = `vanilla`;
-const bestDessert = `${favoriteIceCream}`;
-console.log(bestDessert);
+// const favoriteIceCream = `vanilla`;
+// const bestDessert = `${favoriteIceCream}`;
+// console.log(bestDessert);
 
-const elementarySchool = 90;
-const middleSchool = 70;
-const highSchool = 100;
-const students = `# of Students: ${
-  elementarySchool + middleSchool + highSchool
-}`;
+// const elementarySchool = 90;
+// const middleSchool = 70;
+// const highSchool = 100;
+// const students = `# of Students: ${
+//   elementarySchool + middleSchool + highSchool
+// }`;
 
-console.log(students);
+// console.log(students);
 
-//this func uses back tick
-const bestColor = (color) => {
-  const name = `Jerry`;
-  return `${name} always wears ${color} shirts.`;
+// //this func uses back tick
+// const bestColor = (color) => {
+//   const name = `Jerry`;
+//   return `${name} always wears ${color} shirts.`;
+// };
+// console.log(bestColor`blue`);
+
+// // before
+// // const [, , , ] = ["Baseball top", "kilt", "Blazer", "Boots"];
+// // console.log();
+// // console.log();
+// // console.log();
+// // console.log();
+
+// //after
+// const [top, bottom, outerwear, footwear] = [
+//   "Baseball top",
+//   "kilt",
+//   "Blazer",
+//   "Boots",
+// ];
+// console.log(top);
+// console.log(bottom);
+// console.log(outerwear);
+// console.log(footwear);
+
+// const [, , , italianBread] = [
+//   "Sourdough",
+//   "Baguette",
+//   "Brioche",
+//   "Focaccia",
+//   "Multigrain",
+// ];
+// console.log(
+//   `${italianBread} is leavened bread than produces a fluffy appearance.`
+// );
+
+// //time to destructure
+// const aircrafts = {
+//   brand: "Boeing",
+//   nose: "Pointed nose",
+//   windshield: "V-shaped windshield",
+//   tail: "Sloped Tail",
+// };
+// const { brand, nose, windshield, tail } = aircrafts;
+// console.log(`The ${brand} Company was founded on July 15, 1916.`);
+// console.log(`This aircraft has a ${nose}, and a ${windshield}`);
+// console.log(`And at least but not last a ${tail}`);
+
+// const smartTV = {
+//   type: "QLED",
+//   shape: "Flat",
+//   ports: "HDMI",
+//   connectivity: "Wi-Fi",
+// };
+// const { type: screenType, shape: screenShape } = smartTV;
+// console.log(screenType);
+// console.log(screenShape);
+
+// const oldShows = {
+//   fifties: "Maverick",
+//   sixties: "The Saint",
+//   seventies: "The Love Boat",
+//   eighties: "Manimal",
+//   nineties: "Dawson's Creek",
+// };
+// const { eighties, ...otherOldShows } = oldShows;
+// console.log(`The best tv show in the 80s was ${eighties}`);
+// console.log(otherOldShows);
+
+const beer = {
+  name: "	Blue Moon White",
+  alcoholPercentage: 5.4,
+  calories: 171,
+  carbs: 12.9,
 };
-console.log(bestColor`blue`);
+const { brand = "N/A" } = beer;
+console.log(brand);
 
-// before
-// const [, , , ] = ["Baseball top", "kilt", "Blazer", "Boots"];
-// console.log();
-// console.log();
-// console.log();
-// console.log();
-
-//after
-const [top, bottom, outerwear, footwear] = [
-  "Baseball top",
-  "kilt",
-  "Blazer",
-  "Boots",
+const mountains = [
+  "Swiss Alps",
+  "Mount Logan",
+  "Mount Fuji",
+  "Mauna Kea",
+  "Jotunheimen Mountains",
 ];
-console.log(top);
-console.log(bottom);
-console.log(outerwear);
-console.log(footwear);
 
-const [, , , italianBread] = [
-  "Sourdough",
-  "Baguette",
-  "Brioche",
-  "Focaccia",
-  "Multigrain",
-];
-console.log(
-  `${italianBread} is leavened bread than produces a fluffy appearance.`
-);
+function getMountainsNickname([alps, logan]) {
+  console.log(`The ${alps} are The Magical Mountains.`);
+  console.log(`The ${logan} is The Snowy Paradise.`);
+}
+getMountainsNickname(mountains);
 
-//time to destructure
-const aircrafts = {
-  brand: "Boeing",
-  nose: "Pointed nose",
-  windshield: "V-shaped windshield",
-  tail: "Sloped Tail",
+// const challengeGreeting = () => {
+//   const generalMessage = `Hello! Welcome to Terrace Inn & Suites!`;
+//   const seasonalMessage = `Need to cool off? Visit one of our three resort pools!`;
+//   return `${generalMessage} ${seasonalMessage}`;
+// };
+// console.log(challengeGreeting());
+
+const challengeGreeting = (name) => {
+  const generalMessage = `Welcome ${name} to Terrace Inn & Suites!`;
+  const seasonalMessage =
+    "Need to cool off? Visit one of our three resort pools!";
+  return generalMessage + " " + seasonalMessage;
 };
-const { brand, nose, windshield, tail } = aircrafts;
-console.log(`The ${brand} Company was founded on July 15, 1916.`);
-console.log(`This aircraft has a ${nose}, and a ${windshield}`);
-console.log(`And at least but not last a ${tail}`);
+console.log(challengeGreeting("Sarah"));
