@@ -28,8 +28,12 @@
 //   el.innerHTML = "YEAH BOI";
 // }
 
-function info() {
-  const el = document.getElementsByTagName("li");
-  const output = document.querySelector("#output");
-  output.innerHTML = el.length;
-}
+// function info() {
+//   const el = document.getElementsByTagName("li");
+//   const output = document.querySelector("#output");
+//   output.innerHTML = el.length;
+// }
+
+const el = document.querySelectorAll(".news");
+const paragraph = document.getElementsByTagName("p");
+paragraph[0].innerHTML = el.length;
