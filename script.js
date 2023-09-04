@@ -8,7 +8,17 @@
 //   el.innerHTML = "saved";
 // }
 
-function show() {
-  const el = document.getElementById("dessert");
-  el.setAttribute("src", "https://mimo.app/i/croissant.png");
+// function show() {
+//   const el = document.getElementById("dessert");
+//   el.setAttribute("src", "https://mimo.app/i/croissant.png");
+// }
+
+// function doneEvent() {
+//   const el = document.querySelector(".done");
+//   el.innerHTML = "Done";
+// }
+
+function save() {
+  const el = document.querySelector("p.content");
+  el.innerHTML = "Saved";
 }
