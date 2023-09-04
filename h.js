@@ -737,3 +737,16 @@ const challengeGreeting = (name) => {
   return generalMessage + " " + seasonalMessage;
 };
 console.log(challengeGreeting("Sarah"));
+
+const flavors = ["chocolate", "vanilla", "strawberry"];
+const options = flavors.map(function () {});
+
+const lcStates = ["md", "va", "wv"];
+const ucStates = lcStates.map((ele) => ele.toUpperCase());
+console.log(ucStates);
+
+//add element to the correct params
+const gallons = [1.2, 4.5, 3.2];
+const liters = gallons.map(function () {
+  return element * 3.8;
+});
