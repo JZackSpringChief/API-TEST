@@ -590,3 +590,6 @@ function stockCheck(groupSize, totalAvailable, minPerUser) {
   }
 }
 console.log(stockCheck(group, total, minimum));
+
+const decloration = () => "im the best";
+console.log(decloration());
