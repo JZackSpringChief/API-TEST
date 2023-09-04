@@ -57,8 +57,33 @@
 //   output.innerHTML = el[0].innerHTML;
 // }
 
-function answer() {
-  const el = document.getElementsByClassName("city answer");
-  const output = document.querySelector("#output");
-  output.innerHTML = el[0].innerHTML;
+// function answer() {
+//   const el = document.getElementsByClassName("city answer");
+//   const output = document.querySelector("#output");
+//   output.innerHTML = el[0].innerHTML;
+// }
+
+//this one is wrong
+// function update() {
+//   const el = document.getElementsByClassName("color");
+//   el[0].innerHTML.color.style = "pink";
+//   el[0].innerHTML.style.color = "pink";
+//   el[1].innerHTML.style.color = "thistle";
+//   el[1].innerHTML.style.color = "thistle";
+//   el[2].innerHTML.style.color = "tan";
+//   el[2].innerHTML.style.color = "tan";
+//   el[3].innerHTML.style.color = "turquoise";
+//   el[3].innerHTML.style.color = "turquoise";
+// }
+
+function update() {
+  const el = document.getElementsByClassName("color");
+  el[0].innerHTML = "pink";
+  el[0].style.color = "pink";
+  el[1].innerHTML = "thistle";
+  el[1].style.color = "thistle";
+  el[2].innerHTML = "tan";
+  el[2].style.color = "tan";
+  el[3].innerHTML = "turquoise";
+  el[3].style.color = "turquoise";
 }
