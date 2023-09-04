@@ -795,3 +795,26 @@ const list = names.reduce(function (prev, curr) {
   return prev + ", " + curr;
 });
 console.log(list);
+
+const values = [5, 4, 3, 2, 1];
+const product = values.reduce((element, index) => {
+  return element * index;
+});
+console.log(product);
+
+// const prices = [20.5, 22.25, 21.75];
+// const taxRates = [1.15, 1.2, 1.1];
+
+// const total = prices.reduce((price, element, index) => {
+//   return price * index;
+// });
+// console.log(total);
+
+//top is wrong and bottom is right
+const prices = [20.5, 22.25, 21.75];
+const taxRates = [1.15, 1.2, 1.1];
+
+const total = prices.reduce(function (prev, curr, index) {
+  return prev + curr * taxRates[index];
+});
+console.log(total);
