@@ -34,6 +34,13 @@
 //   output.innerHTML = el.length;
 // }
 
-const el = document.querySelectorAll(".news");
-const paragraph = document.getElementsByTagName("p");
-paragraph[0].innerHTML = el.length;
+// const el = document.querySelectorAll(".news");
+// const paragraph = document.getElementsByTagName("p");
+// paragraph[0].innerHTML = el.length;
+
+//add to find the index of 2
+function info() {
+  const el = document.getElementsByTagName("li");
+  const output = document.querySelector("#output");
+  output.innerHTML = el.length;
+}
