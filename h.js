@@ -436,3 +436,27 @@ guessNum(11);
 function makeBigger() {
   let word = word.toString();
 }
+
+function multiplyByTen(numb) {
+  return numb * 10;
+}
+const noon = multiplyByTen(23);
+console.log(noon);
+
+function hasPassed(score) {
+  if (score >= 50) {
+    console.log("Passed");
+  }
+}
+hasPassed(80);
+
+function totalPrice(cost) {
+  if (cost <= 49) {
+    cost = cost * 1.1;
+    console.log(cost);
+    return cost;
+  }
+  console.log(cost);
+}
+
+totalPrice(50);
