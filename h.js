@@ -593,3 +593,88 @@ console.log(stockCheck(group, total, minimum));
 
 const decloration = () => "im the best";
 console.log(decloration());
+
+const winningNumber = Math.floor(Math.random());
+
+function drawWinningNumber() {
+  return winningNumber * 3;
+}
+
+function drawWinner() {
+  const players = ["Amanda", "Sheila", "Rob"];
+  const winner = players[winningNumber];
+  console.log("The winner is " + winner);
+}
+drawWinner();
+
+const toDoList = ["sweeping", "washing", "mopping"];
+
+function cleanUp() {
+  for (let i = 0; i < toDoList.length; i++) {
+    toDoList.pop(toDoList[i]);
+  }
+  console.log("I still have some " + toDoList + " to do");
+}
+cleanUp();
+
+const favoriteIceCream = `vanilla`;
+const bestDessert = `${favoriteIceCream}`;
+console.log(bestDessert);
+
+const elementarySchool = 90;
+const middleSchool = 70;
+const highSchool = 100;
+const students = `# of Students: ${
+  elementarySchool + middleSchool + highSchool
+}`;
+
+console.log(students);
+
+//this func uses back tick
+const bestColor = (color) => {
+  const name = `Jerry`;
+  return `${name} always wears ${color} shirts.`;
+};
+console.log(bestColor`blue`);
+
+// before
+// const [, , , ] = ["Baseball top", "kilt", "Blazer", "Boots"];
+// console.log();
+// console.log();
+// console.log();
+// console.log();
+
+//after
+const [top, bottom, outerwear, footwear] = [
+  "Baseball top",
+  "kilt",
+  "Blazer",
+  "Boots",
+];
+console.log(top);
+console.log(bottom);
+console.log(outerwear);
+console.log(footwear);
+
+const [, , , italianBread] = [
+  "Sourdough",
+  "Baguette",
+  "Brioche",
+  "Focaccia",
+  "Multigrain",
+];
+console.log(
+  `${italianBread} is leavened bread than produces a fluffy appearance.`
+);
+
+//time to destructure
+const aircrafts = {
+  brand: "Boeing",
+  nose: "Pointed nose",
+  windshield: "V-shaped windshield",
+  tail: "Sloped Tail",
+};
+const { brand, nose, windshield, tail } = aircrafts;
+console.log(`The ${brand} Company was founded on July 15, 1916.`);
+console.log(`This aircraft has a ${nose}, and a ${windshield}`);
+console.log(`And at least but not last a ${tail}`);
