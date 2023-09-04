@@ -18,7 +18,12 @@
 //   el.innerHTML = "Done";
 // }
 
-function save() {
-  const el = document.querySelector("p.content");
-  el.innerHTML = "Saved";
+// function save() {
+//   const el = document.querySelector("p.content");
+//   el.innerHTML = "Saved";
+// }
+
+function update() {
+  const el = document.querySelector(".content.more");
+  el.innerHTML = "YEAH BOI";
 }
