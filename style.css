@@ -1,10 +1,10 @@
 body {
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Arial Narrow", sans-serif;
   text-align: center;
 }
 
 img {
-  width: 40%;
+  width: 60%;
 }
 
 ul {
@@ -14,18 +14,6 @@ ul {
 
 li {
   font-weight: bold;
-}
-
-.task1 {
-  color: red;
-}
-
-.task2 {
-  color: orange;
-}
-
-.task3 {
-  color: dodgerblue;
 }
 
 #output {

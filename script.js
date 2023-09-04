@@ -45,8 +45,14 @@
 //   output.innerHTML = el.length;
 // }
 
-function info() {
-  const el = document.getElementsByClassName("task1");
+// function info() {
+//   const el = document.getElementsByClassName("task1");
+//   const output = document.querySelector("#output");
+//   output.innerHTML = "You have " + el.length + " urgent tasks";
+// }
+
+function answer() {
+  const el = document.getElementsByClassName("year");
   const output = document.querySelector("#output");
-  output.innerHTML = "You have " + el.length + " urgent tasks";
+  output.innerHTML = el[0].innerHTML;
 }
