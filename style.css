@@ -1,14 +1,33 @@
 body {
-  background-color: #3e416d;
-}
-
-a {
+  font-family: "Courier New", Courier, monospace;
   text-align: center;
-  background-color: #62d76b;
-  border: 5px solid indigo;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+img {
+  width: 40%;
+}
+
+ul {
+  list-style: circle;
+  text-align: left;
+}
+
+li {
+  font-weight: bold;
+}
+
+.task1 {
+  color: red;
+}
+
+.task2 {
+  color: orange;
+}
+
+.task3 {
+  color: dodgerblue;
+}
+
+#output {
+  text-align: center;
 }
