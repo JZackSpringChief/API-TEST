@@ -126,18 +126,26 @@
 //     el.classList.add("border", "bg-white");
 //    }
 
-const docBody = document.getElementById("the-body");
-console.log(docBody);
-const h1 = document.getElementById("the-heading");
+// const docBody = document.getElementById("the-body");
+// console.log(docBody);
+// const h1 = document.getElementById("the-heading");
 
-const body = document.getElementById("parent");
-const heading = document.createElement("h2");
-heading.innerHTML = "Scoop!";
-body.appendChild(heading);
+// const body = document.getElementById("parent");
+// const heading = document.createElement("h2");
+// heading.innerHTML = "Scoop!";
+// body.appendChild(heading);
 
-// to delete
-const bodyElement = document.getElementById("parent");
-// to access child
-const paragraph = document.getElementById("child");
-// to remove
-bodyElement.removeChild(paragraph);
+// // to delete
+// const bodyElement = document.getElementById("parent");
+// // to access child
+// const paragraph = document.getElementById("child");
+// // to remove
+// bodyElement.removeChild(paragraph);
+
+// let mainChildren = document.querySelector("main").children;
+// let lastChild = document.querySelector();
+// lastChild.innerHTML = "Book now your ticket";
+
+let mainChildren = document.querySelector("main").children;
+let lastChild = mainChildren[mainChildren.length - 1];
+lastChild.innerHTML = "Book now your ticket";
