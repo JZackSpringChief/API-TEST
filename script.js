@@ -161,10 +161,13 @@
 // let list = document.body.children[1];
 // list.firstElementChild.innerHTML = "components";
 
-const list = document.querySelector("ul");
-const element = document.createElement("li");
-element.innerHTML = "Wake little sis up";
+// const list = document.querySelector("ul");
+// const element = document.createElement("li");
+// element.innerHTML = "Wake little sis up";
 
-list.appendChild(element);
+// list.appendChild(element);
 
-list.appendChild(element);
+const parent = document.querySelector("body");
+const image = document.createElement("img");
+image.src = "https://mimo.app/i/market.png";
+parent.appendChild(image);
