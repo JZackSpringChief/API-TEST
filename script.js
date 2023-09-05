@@ -76,14 +76,25 @@
 //   el[3].innerHTML.style.color = "turquoise";
 // }
 
-function update() {
-  const el = document.getElementsByClassName("color");
-  el[0].innerHTML = "pink";
-  el[0].style.color = "pink";
-  el[1].innerHTML = "thistle";
-  el[1].style.color = "thistle";
-  el[2].innerHTML = "tan";
-  el[2].style.color = "tan";
-  el[3].innerHTML = "turquoise";
-  el[3].style.color = "turquoise";
-}
+// function update() {
+//   const el = document.getElementsByClassName("color");
+//   el[0].innerHTML = "pink";
+//   el[0].style.color = "pink";
+//   el[1].innerHTML = "thistle";
+//   el[1].style.color = "thistle";
+//   el[2].innerHTML = "tan";
+//   el[2].style.color = "tan";
+//   el[3].innerHTML = "turquoise";
+//   el[3].style.color = "turquoise";
+// }
+
+// add .value
+const sendReview = () => {
+  const text = document.querySelector("#addedReviews");
+  const reviewInput = document.querySelector("#input-text").value;
+  const reviewTextarea = document.querySelector("#input-textarea").value;
+  text.innerHTML = reviewInput + " : " + reviewTextarea;
+
+  console.log(reviewInput);
+  console.log(reviewTextarea);
+};

@@ -1,19 +1,14 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="./style.css" />
-  </head>
   <body>
-    <h1>Colors Catalog</h1>
-    <img src="https://mimo.app/i/colorful-path.png" />
-    <ul>
-      <li class="red color">red</li>
-      <li class="orange color">yellow</li>
-      <li class="green color">green</li>
-      <li class="blue color">blue</li>
-    </ul>
-    <button onclick="update()">Update Colors</button>
-    <p id="output"></p>
+    <img src="https://mimo.app/r/batduck.png" width="100" height="100" />
+    <h1>Customer Reviews</h1>
+    <input id="input-text" type="text" placeholder="Your name" />
+    <br />
+    <textarea id="input-textarea" rows="3" cols="18"></textarea>
+    <br />
+    <button onclick="sendReview()">Add Review</button>
+    <p id="addedReviews"></p>
     <script src="script.js"></script>
   </body>
 </html>
