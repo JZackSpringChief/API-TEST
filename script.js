@@ -129,3 +129,15 @@
 const docBody = document.getElementById("the-body");
 console.log(docBody);
 const h1 = document.getElementById("the-heading");
+
+const body = document.getElementById("parent");
+const heading = document.createElement("h2");
+heading.innerHTML = "Scoop!";
+body.appendChild(heading);
+
+// to delete
+const bodyElement = document.getElementById("parent");
+// to access child
+const paragraph = document.getElementById("child");
+// to remove
+bodyElement.removeChild(paragraph);
