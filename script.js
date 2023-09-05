@@ -146,6 +146,14 @@
 // let lastChild = document.querySelector();
 // lastChild.innerHTML = "Book now your ticket";
 
-let mainChildren = document.querySelector("main").children;
-let lastChild = mainChildren[mainChildren.length - 1];
-lastChild.innerHTML = "Book now your ticket";
+// let mainChildren = document.querySelector("main").children;
+// let lastChild = mainChildren[mainChildren.length - 1];
+// lastChild.innerHTML = "Book now your ticket";
+
+//wrong
+// let mainChild = document.body.children("2");
+// let ptag = mainChild[mainChild.length - 1];
+// ptag.innerHTML = "2";
+
+document.body.children[1].innerHTML = "35";
+document.body.children[3].innerHTML = "2";
