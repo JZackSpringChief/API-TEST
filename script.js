@@ -89,19 +89,43 @@
 // }
 
 // add .value
-const sendReview = () => {
-  const text = document.querySelector("#addedReviews");
-  const reviewInput = document.querySelector("#input-text").value;
-  const reviewTextarea = document.querySelector("#input-textarea").value;
-  text.innerHTML = reviewInput + " : " + reviewTextarea;
+// const sendReview = () => {
+//   const text = document.querySelector("#addedReviews");
+//   const reviewInput = document.querySelector("#input-text").value;
+//   const reviewTextarea = document.querySelector("#input-textarea").value;
+//   text.innerHTML = reviewInput + " : " + reviewTextarea;
 
-  console.log(reviewInput);
-  console.log(reviewTextarea);
-};
+//   console.log(reviewInput);
+//   console.log(reviewTextarea);
+// };
 
-function nextLocation() {
-  const text = document.querySelector("h1");
-  text.innerHTML = "Travel to the Moon";
-  const el = document.querySelector("img");
-  el.src = "https://mimo.app/i/moon.png";
-}
+// function nextLocation() {
+//   const text = document.querySelector("h1");
+//   text.innerHTML = "Travel to the Moon";
+//   const el = document.querySelector("img");
+//   el.src = "https://mimo.app/i/moon.png";
+// }
+
+// function toggleDarkMode() {
+//     const el = document.querySelector("body");
+//     el.classList.toggle("darkMode");
+//    }
+
+//    function colView() {
+//     const el = document.querySelector("div");
+//     el.classList.remove("grid");
+//    }
+
+//    function toggleMenu() {
+//     const el = document.querySelector("header");
+//     el.classList.toggle("hidden");
+//    }
+
+//    function galleryOn() {
+//     const el = document.querySelector("div");
+//     el.classList.add("border", "bg-white");
+//    }
+
+const docBody = document.getElementById("the-body");
+console.log(docBody);
+const h1 = document.getElementById("the-heading");
