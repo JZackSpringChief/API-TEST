@@ -155,5 +155,8 @@
 // let ptag = mainChild[mainChild.length - 1];
 // ptag.innerHTML = "2";
 
-document.body.children[1].innerHTML = "35";
-document.body.children[3].innerHTML = "2";
+// document.body.children[1].innerHTML = "35";
+// document.body.children[3].innerHTML = "2";
+
+let list = document.body.children[1];
+list.firstElementChild.innerHTML = "components";
