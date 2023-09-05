@@ -158,5 +158,13 @@
 // document.body.children[1].innerHTML = "35";
 // document.body.children[3].innerHTML = "2";
 
-let list = document.body.children[1];
-list.firstElementChild.innerHTML = "components";
+// let list = document.body.children[1];
+// list.firstElementChild.innerHTML = "components";
+
+const list = document.querySelector("ul");
+const element = document.createElement("li");
+element.innerHTML = "Wake little sis up";
+
+list.appendChild(element);
+
+list.appendChild(element);
