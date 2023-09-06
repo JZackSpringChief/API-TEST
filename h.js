@@ -819,18 +819,28 @@
 // });
 // console.log(total);
 
-const sumOfEvenNumbers = (a) => {
-  if (a <= 0 || !Number.isInteger(a)) {
-    return "enter positive integer";
-  }
+// const sumOfEvenNumbers = (a) => {
+//   if (a <= 0 || !Number.isInteger(a)) {
+//     return "enter positive integer";
+//   }
 
-  let sum = 0;
-  for (let i = 2; i <= a; i += 2) {
-    sum += i;
-  }
-  return sum;
-};
+//   let sum = 0;
+//   for (let i = 2; i <= a; i += 2) {
+//     sum += i;
+//   }
+//   return sum;
+// };
 
-const userNum = 10;
-const result = sumOfEvenNumbers(userNum);
-console.log(`The sum of even numbers between 1 and ${userNum} is: ${result}`);
+// const userNum = 10;
+// const result = sumOfEvenNumbers(userNum);
+// console.log(`The sum of even numbers between 1 and ${userNum} is: ${result}`);
+
+const word = "enola";
+
+function reverseCallBack() {
+  const result = word.split("").reverse().join("");
+  console.log(`The string reversed is: "${result}"`);
+  console.log("this executes last as this is asyncronous");
+}
+setTimeout(reverseCallBack, 1500);
+console.log("FIRST AHHAHA");
