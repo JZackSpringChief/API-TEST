@@ -700,28 +700,28 @@
 // console.log(`The best tv show in the 80s was ${eighties}`);
 // console.log(otherOldShows);
 
-const beer = {
-  name: "	Blue Moon White",
-  alcoholPercentage: 5.4,
-  calories: 171,
-  carbs: 12.9,
-};
-const { brand = "N/A" } = beer;
-console.log(brand);
+// const beer = {
+//   name: "	Blue Moon White",
+//   alcoholPercentage: 5.4,
+//   calories: 171,
+//   carbs: 12.9,
+// };
+// const { brand = "N/A" } = beer;
+// console.log(brand);
 
-const mountains = [
-  "Swiss Alps",
-  "Mount Logan",
-  "Mount Fuji",
-  "Mauna Kea",
-  "Jotunheimen Mountains",
-];
+// const mountains = [
+//   "Swiss Alps",
+//   "Mount Logan",
+//   "Mount Fuji",
+//   "Mauna Kea",
+//   "Jotunheimen Mountains",
+// ];
 
-function getMountainsNickname([alps, logan]) {
-  console.log(`The ${alps} are The Magical Mountains.`);
-  console.log(`The ${logan} is The Snowy Paradise.`);
-}
-getMountainsNickname(mountains);
+// function getMountainsNickname([alps, logan]) {
+//   console.log(`The ${alps} are The Magical Mountains.`);
+//   console.log(`The ${logan} is The Snowy Paradise.`);
+// }
+// getMountainsNickname(mountains);
 
 // const challengeGreeting = () => {
 //   const generalMessage = `Hello! Welcome to Terrace Inn & Suites!`;
@@ -730,20 +730,20 @@ getMountainsNickname(mountains);
 // };
 // console.log(challengeGreeting());
 
-const challengeGreeting = (name) => {
-  const generalMessage = `Welcome ${name} to Terrace Inn & Suites!`;
-  const seasonalMessage =
-    "Need to cool off? Visit one of our three resort pools!";
-  return generalMessage + " " + seasonalMessage;
-};
-console.log(challengeGreeting("Sarah"));
+// const challengeGreeting = (name) => {
+//   const generalMessage = `Welcome ${name} to Terrace Inn & Suites!`;
+//   const seasonalMessage =
+//     "Need to cool off? Visit one of our three resort pools!";
+//   return generalMessage + " " + seasonalMessage;
+// };
+// console.log(challengeGreeting("Sarah"));
 
-const flavors = ["chocolate", "vanilla", "strawberry"];
-const options = flavors.map(function () {});
+// const flavors = ["chocolate", "vanilla", "strawberry"];
+// const options = flavors.map(function () {});
 
-const lcStates = ["md", "va", "wv"];
-const ucStates = lcStates.map((ele) => ele.toUpperCase());
-console.log(ucStates);
+// const lcStates = ["md", "va", "wv"];
+// const ucStates = lcStates.map((ele) => ele.toUpperCase());
+// console.log(ucStates);
 
 //add element to the correct params
 // const gallons = [1.2, 4.5, 3.2];
@@ -751,56 +751,56 @@ console.log(ucStates);
 //   return element * 3.8;
 // });
 
-const ratios = [0.79, 0.88, 0.68, 0.95];
-const percentages = ratios.map(function (element) {
-  return element * 100 + "%";
-});
+// const ratios = [0.79, 0.88, 0.68, 0.95];
+// const percentages = ratios.map(function (element) {
+//   return element * 100 + "%";
+// });
 
-console.log(percentages);
+// console.log(percentages);
 
-const states = ["Alaska", "Maryland", "Pennsylvania", "Alabama", "Arkansas"];
-const A = states.filter(function (ele) {
-  return ele[0] == "A";
-});
-console.log(A);
+// const states = ["Alaska", "Maryland", "Pennsylvania", "Alabama", "Arkansas"];
+// const A = states.filter(function (ele) {
+//   return ele[0] == "A";
+// });
+// console.log(A);
 
-//add two params to get result of last quater of the year
-const months = [
-  "Jan",
-  "Feb",
-  "Mar",
-  "Apr",
-  "May",
-  "Jun",
-  "Jul",
-  "Aug",
-  "Sep",
-  "Oct",
-  "Nov",
-  "Dec",
-];
-const q4 = months.filter(function (ele) {
-  return ele[0] > 8;
-});
-console.log(q4);
+// //add two params to get result of last quater of the year
+// const months = [
+//   "Jan",
+//   "Feb",
+//   "Mar",
+//   "Apr",
+//   "May",
+//   "Jun",
+//   "Jul",
+//   "Aug",
+//   "Sep",
+//   "Oct",
+//   "Nov",
+//   "Dec",
+// ];
+// const q4 = months.filter(function (ele) {
+//   return ele[0] > 8;
+// });
+// console.log(q4);
 
-const heights = [66, 75, 73, 56, 62];
-const tall = heights.filter((index) => {
-  return index > 72;
-});
-console.log(tall);
+// const heights = [66, 75, 73, 56, 62];
+// const tall = heights.filter((index) => {
+//   return index > 72;
+// });
+// console.log(tall);
 
-const names = ["Tony", "Tania", "Vince", "Terry"];
-const list = names.reduce(function (prev, curr) {
-  return prev + ", " + curr;
-});
-console.log(list);
+// const names = ["Tony", "Tania", "Vince", "Terry"];
+// const list = names.reduce(function (prev, curr) {
+//   return prev + ", " + curr;
+// });
+// console.log(list);
 
-const values = [5, 4, 3, 2, 1];
-const product = values.reduce((element, index) => {
-  return element * index;
-});
-console.log(product);
+// const values = [5, 4, 3, 2, 1];
+// const product = values.reduce((element, index) => {
+//   return element * index;
+// });
+// console.log(product);
 
 // const prices = [20.5, 22.25, 21.75];
 // const taxRates = [1.15, 1.2, 1.1];
@@ -811,10 +811,26 @@ console.log(product);
 // console.log(total);
 
 //top is wrong and bottom is right
-const prices = [20.5, 22.25, 21.75];
-const taxRates = [1.15, 1.2, 1.1];
+// const prices = [20.5, 22.25, 21.75];
+// const taxRates = [1.15, 1.2, 1.1];
 
-const total = prices.reduce(function (prev, curr, index) {
-  return prev + curr * taxRates[index];
-});
-console.log(total);
+// const total = prices.reduce(function (prev, curr, index) {
+//   return prev + curr * taxRates[index];
+// });
+// console.log(total);
+
+const sumOfEvenNumbers = (a) => {
+  if (a <= 0 || !Number.isInteger(a)) {
+    return "enter positive integer";
+  }
+
+  let sum = 0;
+  for (let i = 2; i <= a; i += 2) {
+    sum += i;
+  }
+  return sum;
+};
+
+const userNum = 10;
+const result = sumOfEvenNumbers(userNum);
+console.log(`The sum of even numbers between 1 and ${userNum} is: ${result}`);

@@ -135,6 +135,8 @@
 // heading.innerHTML = "Scoop!";
 // body.appendChild(heading);
 
+//document.body.firstElementChild.textContent = "Employee Profile";
+
 // // to delete
 // const bodyElement = document.getElementById("parent");
 // // to access child
@@ -171,3 +173,9 @@ const parent = document.querySelector("body");
 const image = document.createElement("img");
 image.src = "https://mimo.app/i/market.png";
 parent.appendChild(image);
+
+const body = document.getElementById("parent");
+const magazine = document.createElement("h3");
+magazine.innerHTML = "Wired";
+
+//body.appendChild(magazine);
