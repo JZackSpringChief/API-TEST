@@ -21,3 +21,5 @@ grid-area
 to define grid areas we use "grid-template-areas"
 
 we use "justify-items" to align grid items along the row axis
+
+javascript event handlers for more help refer to nodes
