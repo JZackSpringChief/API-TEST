@@ -202,8 +202,8 @@ function login() {
 }
 button.onclick = login;
 
-const element = document.querySelector("button");
-const paragraph = document.querySelector("p");
+// const element = document.querySelector("button");
+// const paragraph = document.querySelector("p");
 
 // function makeRed() {
 //   paragraph.style.color = "red";
