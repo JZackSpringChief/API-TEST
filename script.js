@@ -218,3 +218,26 @@ function makeChanges() {
   paragraph.innerText = "Button Clicked";
 }
 button.onclick = makeChanges;
+
+// not understanding. need to come back to this
+const textArea = document.querySelector("textarea"); //this is making a variable
+
+function changeFontColor() {
+  textArea.style.color = "green"; //textArea.style.color is refering to the nodes
+}
+textArea.onscroll = changeFontColor; //this one is using the variable and calling the function on event
+
+let taps = 0;
+
+function middleBoxMessage() {
+  const message = document.querySelector("h3");
+  taps += 1;
+  if (taps) {
+    message.innerHTML = `Tap Counter: ${taps}`;
+  } else {
+    middleBox.removeEventListener("touchstart", middleBoxMessage);
+    message.innerHTML = "Maximum taps reached";
+  }
+}
+const middleBox = document.querySelector(".middle-box");
+middleBox.addEventListener("touchstart", middleBoxMessage);
