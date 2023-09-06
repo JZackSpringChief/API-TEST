@@ -193,3 +193,28 @@ function cancelMessage() {
   document.getElementById("message").innerHTML = "Whoff!";
 }
 document.getElementById("dog").addEventListener("touchcancel", cancelMessage);
+
+const sentence = document.querySelector("#sentence");
+const button = document.querySelector("button");
+
+function login() {
+  sentence.innerText = "User logged in!";
+}
+button.onclick = login;
+
+const element = document.querySelector("button");
+const paragraph = document.querySelector("p");
+
+// function makeRed() {
+//   paragraph.style.color = "red";
+// }
+// element.onclick = makeRed;
+
+const button = document.querySelector("button");
+const paragraph = document.querySelector("p");
+
+function makeChanges() {
+  button.style.opacity = 0.5;
+  paragraph.innerText = "Button Clicked";
+}
+button.onclick = makeChanges;
