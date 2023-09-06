@@ -179,3 +179,17 @@ const magazine = document.createElement("h3");
 magazine.innerHTML = "Wired";
 
 //body.appendChild(magazine);
+
+//js events
+
+function displayMessage() {
+  document.getElementById("message").innerHTML = "Whoff!";
+}
+document.getElementById("dog").addEventListener("touchstart", displayMessage);
+document.getElementById("dog").addEventListener("touchmove", displayMessage);
+document.getElementById("dog").addEventListener("touchend", displayMessage);
+
+function cancelMessage() {
+  document.getElementById("message").innerHTML = "Whoff!";
+}
+document.getElementById("dog").addEventListener("touchcancel", cancelMessage);
