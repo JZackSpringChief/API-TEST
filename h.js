@@ -844,3 +844,14 @@ function reverseCallBack() {
 }
 setTimeout(reverseCallBack, 1500);
 console.log("FIRST AHHAHA");
+
+const reverseString = () => {
+  const result = word.split("").reverse("").join("");
+  console.log(
+    `this string is the same and also reversed using arrow func: "${result}"`
+  );
+  console.log("still async");
+};
+
+setTimeout(reverseString, 2000);
+console.log("second");
