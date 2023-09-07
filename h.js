@@ -877,10 +877,10 @@
 //   console.log(onResolved);
 // });
 
-async function asyncFunc() {
-  console.log("this is an async function");
-}
-asyncFunc();
+// async function asyncFunc() {
+//   console.log("this is an async function");
+// }
+// asyncFunc();
 
 const stock = {
   sunglasses: { quantity: 0, price: 29.99 },
@@ -905,3 +905,12 @@ async function orderSunglasses() {
 }
 
 orderSunglasses();
+
+const sayHello = (name, callback) => {
+  console.log(`Hello, ${name}!`);
+  callback();
+};
+
+const sayGoodbye = () => console.log("Goodbye!");
+
+sayHello("Sam", sayGoodbye);
