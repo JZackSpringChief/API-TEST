@@ -835,44 +835,49 @@
 // const result = sumOfEvenNumbers(userNum);
 // console.log(`The sum of even numbers between 1 and ${userNum} is: ${result}`);
 
-const word = "enola";
+// const word = "enola";
 
-function reverseCallBack() {
-  const result = word.split("").reverse().join("");
-  console.log(`The string reversed is: "${result}"`);
-  console.log("this executes last as this is asyncronous");
+// function reverseCallBack() {
+//   const result = word.split("").reverse().join("");
+//   console.log(`The string reversed is: "${result}"`);
+//   console.log("this executes last as this is asyncronous");
+// }
+// setTimeout(reverseCallBack, 1500);
+// console.log("FIRST AHHAHA");
+
+// const reverseString = () => {
+//   const result = word.split("").reverse("").join("");
+//   console.log(
+//     `this string is the same and also reversed using arrow func: "${result}"`
+//   );
+//   console.log("still async");
+// };
+
+// setTimeout(reverseString, 2000);
+// console.log("second");
+
+// const dessertStock = {
+//   cheeseCake: 10,
+//   moltenCake: 7,
+//   spongeCake: 0,
+// };
+
+// function orderCheeseCake() {
+//   return new Promise((resolve, reject) => {
+//     if (dessertStock.cheeseCake > 0) {
+//       resolve("Cheesecake is available in the stock. Order has been processed");
+//     } else {
+//       reject("Sponge cake is sold out");
+//     }
+//   });
+// }
+
+// const makeOrder = orderCheeseCake();
+// makeOrder.then(function (onResolved) {
+//   console.log(onResolved);
+// });
+
+async function asyncFunc() {
+  console.log("this is an async function");
 }
-setTimeout(reverseCallBack, 1500);
-console.log("FIRST AHHAHA");
-
-const reverseString = () => {
-  const result = word.split("").reverse("").join("");
-  console.log(
-    `this string is the same and also reversed using arrow func: "${result}"`
-  );
-  console.log("still async");
-};
-
-setTimeout(reverseString, 2000);
-console.log("second");
-
-const dessertStock = {
-  cheeseCake: 10,
-  moltenCake: 7,
-  spongeCake: 0,
-};
-
-function orderCheeseCake() {
-  return new Promise((resolve, reject) => {
-    if (dessertStock.cheeseCake > 0) {
-      resolve("Cheesecake is available in the stock. Order has been processed");
-    } else {
-      reject("Sponge cake is sold out");
-    }
-  });
-}
-
-const makeOrder = orderCheeseCake();
-makeOrder.then(function (onResolved) {
-  console.log(onResolved);
-});
+asyncFunc();
