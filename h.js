@@ -855,3 +855,24 @@ const reverseString = () => {
 
 setTimeout(reverseString, 2000);
 console.log("second");
+
+const dessertStock = {
+  cheeseCake: 10,
+  moltenCake: 7,
+  spongeCake: 0,
+};
+
+function orderCheeseCake() {
+  return new Promise((resolve, reject) => {
+    if (dessertStock.cheeseCake > 0) {
+      resolve("Cheesecake is available in the stock. Order has been processed");
+    } else {
+      reject("Sponge cake is sold out");
+    }
+  });
+}
+
+const makeOrder = orderCheeseCake();
+makeOrder.then(function (onResolved) {
+  console.log(onResolved);
+});
