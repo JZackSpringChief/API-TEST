@@ -914,3 +914,10 @@ const sayHello = (name, callback) => {
 const sayGoodbye = () => console.log("Goodbye!");
 
 sayHello("Sam", sayGoodbye);
+
+const ourCallBack = () => console.log("Loading...");
+const intervalID = setInterval(ourCallBack, 200);
+setTimeout(() => {
+  clearInterval(intervalID);
+  console.log("Updates stopped after 1.2 seconds.");
+}, 1200);
