@@ -881,3 +881,27 @@ async function asyncFunc() {
   console.log("this is an async function");
 }
 asyncFunc();
+
+const stock = {
+  sunglasses: { quantity: 0, price: 29.99 },
+  bags: { quantity: 2, price: 109.99 },
+};
+
+const purchacePromise = new Promise(function (resolve, reject) {
+  if (stock.sunglasses.quantity > 0) {
+    resolve("Sunglasses are available. Proceed with order now.");
+  } else {
+    reject("Sunglasses are out of stock. Canceling Order");
+  }
+});
+
+async function orderSunglasses() {
+  try {
+    let result = await purchacePromise;
+    console.log(result);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+orderSunglasses();
