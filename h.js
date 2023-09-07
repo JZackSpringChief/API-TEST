@@ -921,3 +921,11 @@ setTimeout(() => {
   clearInterval(intervalID);
   console.log("Updates stopped after 1.2 seconds.");
 }, 1200);
+
+const fruitArray = ["apples", "coconuts", "bananas", "strawberries", "oranges"];
+
+function fruitsList(fruit) {
+  return "buy 2 " + fruit;
+}
+const newArrayOfStrings = fruitArray.map(fruitsList);
+console.log(newArrayOfStrings);
