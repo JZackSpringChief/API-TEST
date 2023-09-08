@@ -1094,63 +1094,93 @@
 // }
 // prepareDinner();
 
-const calculator = (number1, number2, callback) => {
-  console.log(
-    `The calculator gets the addition of the numbers ${number1} and ${number2}.`
-  );
-  const result = number1 + number2;
-  callback(result);
-};
-const resultCalculator = (result) => console.log(`The result is ${result}`);
+// const calculator = (number1, number2, callback) => {
+//   console.log(
+//     `The calculator gets the addition of the numbers ${number1} and ${number2}.`
+//   );
+//   const result = number1 + number2;
+//   callback(result);
+// };
+// const resultCalculator = (result) => console.log(`The result is ${result}`);
 
-calculator(5, 7, resultCalculator);
+// calculator(5, 7, resultCalculator);
 
-class Book {
-  constructor(author, title) {
-    this.author = author;
-    this.title = title;
-  }
-}
+// class Book {
+//   constructor(author, title) {
+//     this.author = author;
+//     this.title = title;
+//   }
+// }
 
-const book1 = new Book("Leo Tolstoy", "War and Peace");
-const book2 = new Book("Dr. Seuss", "Oh, the Places You'll Go!");
-console.log(book1);
-console.log(book2);
+// const book1 = new Book("Leo Tolstoy", "War and Peace");
+// const book2 = new Book("Dr. Seuss", "Oh, the Places You'll Go!");
+// console.log(book1);
+// console.log(book2);
 
-class VirtualPet {
+// class VirtualPet {
+//   constructor(name) {
+//     this.name = name;
+//   }
+//   eat(food) {
+//     if (food === "treats") {
+//       console.log("nom nom");
+//     } else {
+//       console.log("discard");
+//     }
+//   }
+// }
+// const pet = new VirtualPet("Tom");
+// pet.eat("treats");
+
+// class Playlist {
+//   constructor() {
+//     this.songs = [];
+//   }
+//   addSong(song) {
+//     this.songs.push(song);
+//   }
+//   play() {
+//     for (let i = 0; i < this.song.length; i++) {
+//       console.log(this.song[i]);
+//     }
+//   }
+//   remove() {
+//     this.songs.pop();
+//   }
+// }
+
+// const myPlaylist = new Playlist();
+
+// myPlaylist.addSong("Alright");
+
+// myPlaylist.play();
+
+class Customer {
   constructor(name) {
     this.name = name;
   }
-  eat(food) {
-    if (food === "treats") {
-      console.log("nom nom");
-    } else {
-      console.log("discard");
-    }
+}
+const cust1 = new Customer("Sally");
+console.log(cust1);
+
+class Email {
+  constructor(address) {
+    this.address = address;
   }
 }
-const pet = new VirtualPet("Tom");
-pet.eat("treats");
+const email1 = new Email("joe@test.com");
+const email2 = new Email("sally@mail.com");
+console.log(email1);
+console.log(email2);
 
-class Playlist {
-  constructor() {
-    this.songs = [];
-  }
-  addSong(song) {
-    this.songs.push(song);
-  }
-  play() {
-    for (let i = 0; i < this.song.length; i++) {
-      console.log(this.song[i]);
-    }
-  }
-  remove() {
-    this.songs.pop();
+class Phone {
+  constructor(number) {
+    this.number = number;
+    this.doNotCall = false;
   }
 }
-
-const myPlaylist = new Playlist();
-
-myPlaylist.addSong("Alright");
-
-myPlaylist.play();
+const phone1 = new Phone("3455556632");
+const phone2 = new Phone("4685559441");
+phone1.doNotCall = true;
+console.log(phone1);
+console.log(phone2);
