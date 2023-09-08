@@ -1018,26 +1018,71 @@
 // }
 // customizeOrder();
 
-const data = ["Hello", "foo", "bar", 7, "smith"];
-const intruder = data.find((i) => typeof i !== "string");
+// const data = ["Hello", "foo", "bar", 7, "smith"];
+// const intruder = data.find((i) => typeof i !== "string");
 
-function checkIfIntruderFound() {
+// function checkIfIntruderFound() {
+//   return new Promise(function (resolve, reject) {
+//     if (intruder) {
+//       resolve(`Intruder has been found. It is item ${intruder}`);
+//     } else {
+//       reject("Intruder not found..");
+//     }
+//   });
+// }
+
+// function callOutTheIntruder() {
+//   checkIfIntruderFound()
+//     .then(function (result) {
+//       console.log(result);
+//     })
+//     .catch(function (error) {
+//       console.log(error);
+//     });
+// }
+// callOutTheIntruder();
+
+let cleanDishes = [false, false];
+let allClean = false;
+
+function loadDishwasher() {
+  return new Promise(function (resolve) {
+    for (let i = 0; i < cleanDishes.length; i++) {
+      if (!cleanDishes[i]) {
+        cleanDishes[i] = true;
+      }
+    }
+    setTimeout(function () {
+      allClean = true;
+      console.log(`All ${cleanDishes.length} dishes are now clean...`);
+      resolve(allClean);
+    }, 1000);
+  });
+}
+
+function putDishesAway(areAllDishesClean) {
   return new Promise(function (resolve, reject) {
-    if (intruder) {
-      resolve(`Intruder has been found. It is item ${intruder}`);
+    if (areAllDishesClean) {
+      setTimeout(function () {
+        resolve("No more dishes to wash.");
+      }, 1000);
     } else {
-      reject("Intruder not found..");
+      setTimeout(function () {
+        reject("Some dishes are not clean yet.");
+      }, 1000);
     }
   });
 }
 
-function callOutTheIntruder() {
-  checkIfIntruderFound()
-    .then(function (result) {
-      console.log(result);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
+function startDishWashingProcess() {
+  return loadDishwasher().then(function (allDishesClean) {
+    return putDishesAway(allDishesClean)
+      .then(function (result) {
+        console.log(result);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  });
 }
-callOutTheIntruder();
+startDishWashingProcess();
