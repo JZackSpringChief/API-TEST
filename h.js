@@ -969,51 +969,75 @@
 //   console.log("Stop offers after 1300 ms.");
 // }, 1300);
 
-let count = 0;
-let intervalID = null;
+// let count = 0;
+// let intervalID = null;
 
-function checkLocation() {
-  if (count < 2) {
-    count++;
-    console.log("Track Lions");
-  } else {
-    clearInterval(intervalID);
-    console.log("Turn off tracking");
-  }
-}
+// function checkLocation() {
+//   if (count < 2) {
+//     count++;
+//     console.log("Track Lions");
+//   } else {
+//     clearInterval(intervalID);
+//     console.log("Turn off tracking");
+//   }
+// }
 
-function start() {
-  intervalID = setInterval(checkLocation, 500);
-}
-start();
+// function start() {
+//   intervalID = setInterval(checkLocation, 500);
+// }
+// start();
 
-const mathGrades = [5.0, 4.8, 3.5, 3.0];
-const callbackConditional = (num) => num > 4;
+// const mathGrades = [5.0, 4.8, 3.5, 3.0];
+// const callbackConditional = (num) => num > 4;
 
-function bestMathGrades() {
-  const bestGrades = mathGrades.filter(callbackConditional);
-  console.log(bestGrades);
-  return bestGrades;
-}
-bestMathGrades();
-console.log("The best two grades in Maths");
+// function bestMathGrades() {
+//   const bestGrades = mathGrades.filter(callbackConditional);
+//   console.log(bestGrades);
+//   return bestGrades;
+// }
+// bestMathGrades();
+// console.log("The best two grades in Maths");
 
-let promise = new Promise(resolve, reject);
+// let promise = new Promise(resolve, reject);
 
-const burgerSandwich = {
-  pattySource: "chicken",
-  tomato: true,
-  lettuce: true,
-  onion: true,
-  cheese: true,
-};
+// const burgerSandwich = {
+//   pattySource: "chicken",
+//   tomato: true,
+//   lettuce: true,
+//   onion: true,
+//   cheese: true,
+// };
 
-function customizeOrder() {
-  return new Promise(function (resolve) {
-    if (burgerSandwich.onion) {
-      burgerSandwich.onion = false;
-      resolve(burgerSandwich.onion);
+// function customizeOrder() {
+//   return new Promise(function (resolve) {
+//     if (burgerSandwich.onion) {
+//       burgerSandwich.onion = false;
+//       resolve(burgerSandwich.onion);
+//     }
+//   });
+// }
+// customizeOrder();
+
+const data = ["Hello", "foo", "bar", 7, "smith"];
+const intruder = data.find((i) => typeof i !== "string");
+
+function checkIfIntruderFound() {
+  return new Promise(function (resolve, reject) {
+    if (intruder) {
+      resolve(`Intruder has been found. It is item ${intruder}`);
+    } else {
+      reject("Intruder not found..");
     }
   });
 }
-customizeOrder();
+
+function callOutTheIntruder() {
+  checkIfIntruderFound()
+    .then(function (result) {
+      console.log(result);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+}
+callOutTheIntruder();
