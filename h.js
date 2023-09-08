@@ -997,3 +997,23 @@ function bestMathGrades() {
 }
 bestMathGrades();
 console.log("The best two grades in Maths");
+
+let promise = new Promise(resolve, reject);
+
+const burgerSandwich = {
+  pattySource: "chicken",
+  tomato: true,
+  lettuce: true,
+  onion: true,
+  cheese: true,
+};
+
+function customizeOrder() {
+  return new Promise(function (resolve) {
+    if (burgerSandwich.onion) {
+      burgerSandwich.onion = false;
+      resolve(burgerSandwich.onion);
+    }
+  });
+}
+customizeOrder();
