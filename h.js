@@ -882,50 +882,82 @@
 // }
 // asyncFunc();
 
-const stock = {
-  sunglasses: { quantity: 0, price: 29.99 },
-  bags: { quantity: 2, price: 109.99 },
-};
+// const stock = {
+//   sunglasses: { quantity: 0, price: 29.99 },
+//   bags: { quantity: 2, price: 109.99 },
+// };
 
-const purchacePromise = new Promise(function (resolve, reject) {
-  if (stock.sunglasses.quantity > 0) {
-    resolve("Sunglasses are available. Proceed with order now.");
+// const purchacePromise = new Promise(function (resolve, reject) {
+//   if (stock.sunglasses.quantity > 0) {
+//     resolve("Sunglasses are available. Proceed with order now.");
+//   } else {
+//     reject("Sunglasses are out of stock. Canceling Order");
+//   }
+// });
+
+// async function orderSunglasses() {
+//   try {
+//     let result = await purchacePromise;
+//     console.log(result);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+
+// orderSunglasses();
+
+// const sayHello = (name, callback) => {
+//   console.log(`Hello, ${name}!`);
+//   callback();
+// };
+
+// const sayGoodbye = () => console.log("Goodbye!");
+
+// sayHello("Sam", sayGoodbye);
+
+// const ourCallBack = () => console.log("Loading...");
+// const intervalID = setInterval(ourCallBack, 200);
+// setTimeout(() => {
+//   clearInterval(intervalID);
+//   console.log("Updates stopped after 1.2 seconds.");
+// }, 1200);
+
+// const fruitArray = ["apples", "coconuts", "bananas", "strawberries", "oranges"];
+
+// function fruitsList(fruit) {
+//   return "buy 2 " + fruit;
+// }
+// const newArrayOfStrings = fruitArray.map(fruitsList);
+// console.log(newArrayOfStrings);
+
+// setTimeout(() => {
+//   console.log("dessert", 1000);
+// });
+// console.log("starters");
+
+// function callback() {
+//   console.log("New Message");
+// }
+// const intervalID = setInterval(callback, 500);
+// setTimeout(() => {
+//   clearInterval(intervalID);
+//   console.log("Muted chat");
+// }, 1500);
+
+let count = 0;
+let intervalID = null;
+
+function makeBet() {
+  if (count < 2) {
+    count++;
+    console.log("New Bet");
   } else {
-    reject("Sunglasses are out of stock. Canceling Order");
-  }
-});
-
-async function orderSunglasses() {
-  try {
-    let result = await purchacePromise;
-    console.log(result);
-  } catch (error) {
-    console.log(error);
+    clearInterval(intervalID);
+    console.log("The interval was cleared after 2 bets");
   }
 }
 
-orderSunglasses();
-
-const sayHello = (name, callback) => {
-  console.log(`Hello, ${name}!`);
-  callback();
-};
-
-const sayGoodbye = () => console.log("Goodbye!");
-
-sayHello("Sam", sayGoodbye);
-
-const ourCallBack = () => console.log("Loading...");
-const intervalID = setInterval(ourCallBack, 200);
-setTimeout(() => {
-  clearInterval(intervalID);
-  console.log("Updates stopped after 1.2 seconds.");
-}, 1200);
-
-const fruitArray = ["apples", "coconuts", "bananas", "strawberries", "oranges"];
-
-function fruitsList(fruit) {
-  return "buy 2 " + fruit;
+function start() {
+  intervalID = setInterval(makeBet, 500);
 }
-const newArrayOfStrings = fruitArray.map(fruitsList);
-console.log(newArrayOfStrings);
+start();
