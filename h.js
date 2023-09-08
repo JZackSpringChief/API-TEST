@@ -1086,3 +1086,10 @@ function startDishWashingProcess() {
   });
 }
 startDishWashingProcess();
+
+async function prepareDinner() {
+  setTimeout(function () {
+    console.log("Dinner is prepared...");
+  }, 1000);
+}
+prepareDinner();
