@@ -1042,54 +1042,65 @@
 // }
 // callOutTheIntruder();
 
-let cleanDishes = [false, false];
-let allClean = false;
+// let cleanDishes = [false, false];
+// let allClean = false;
 
-function loadDishwasher() {
-  return new Promise(function (resolve) {
-    for (let i = 0; i < cleanDishes.length; i++) {
-      if (!cleanDishes[i]) {
-        cleanDishes[i] = true;
-      }
-    }
-    setTimeout(function () {
-      allClean = true;
-      console.log(`All ${cleanDishes.length} dishes are now clean...`);
-      resolve(allClean);
-    }, 1000);
-  });
-}
+// function loadDishwasher() {
+//   return new Promise(function (resolve) {
+//     for (let i = 0; i < cleanDishes.length; i++) {
+//       if (!cleanDishes[i]) {
+//         cleanDishes[i] = true;
+//       }
+//     }
+//     setTimeout(function () {
+//       allClean = true;
+//       console.log(`All ${cleanDishes.length} dishes are now clean...`);
+//       resolve(allClean);
+//     }, 1000);
+//   });
+// }
 
-function putDishesAway(areAllDishesClean) {
-  return new Promise(function (resolve, reject) {
-    if (areAllDishesClean) {
-      setTimeout(function () {
-        resolve("No more dishes to wash.");
-      }, 1000);
-    } else {
-      setTimeout(function () {
-        reject("Some dishes are not clean yet.");
-      }, 1000);
-    }
-  });
-}
+// function putDishesAway(areAllDishesClean) {
+//   return new Promise(function (resolve, reject) {
+//     if (areAllDishesClean) {
+//       setTimeout(function () {
+//         resolve("No more dishes to wash.");
+//       }, 1000);
+//     } else {
+//       setTimeout(function () {
+//         reject("Some dishes are not clean yet.");
+//       }, 1000);
+//     }
+//   });
+// }
 
-function startDishWashingProcess() {
-  return loadDishwasher().then(function (allDishesClean) {
-    return putDishesAway(allDishesClean)
-      .then(function (result) {
-        console.log(result);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  });
-}
-startDishWashingProcess();
+// function startDishWashingProcess() {
+//   return loadDishwasher().then(function (allDishesClean) {
+//     return putDishesAway(allDishesClean)
+//       .then(function (result) {
+//         console.log(result);
+//       })
+//       .catch(function (error) {
+//         console.log(error);
+//       });
+//   });
+// }
+// startDishWashingProcess();
 
-async function prepareDinner() {
-  setTimeout(function () {
-    console.log("Dinner is prepared...");
-  }, 1000);
-}
-prepareDinner();
+// async function prepareDinner() {
+//   setTimeout(function () {
+//     console.log("Dinner is prepared...");
+//   }, 1000);
+// }
+// prepareDinner();
+
+const calculator = (number1, number2, callback) => {
+  console.log(
+    `The calculator gets the addition of the numbers ${number1} and ${number2}.`
+  );
+  const result = number1 + number2;
+  callback(result);
+};
+const resultCalculator = (result) => console.log(`The result is ${result}`);
+
+calculator(5, 7, resultCalculator);
