@@ -986,3 +986,14 @@ function start() {
   intervalID = setInterval(checkLocation, 500);
 }
 start();
+
+const mathGrades = [5.0, 4.8, 3.5, 3.0];
+const callbackConditional = (num) => num > 4;
+
+function bestMathGrades() {
+  const bestGrades = mathGrades.filter(callbackConditional);
+  console.log(bestGrades);
+  return bestGrades;
+}
+bestMathGrades();
+console.log("The best two grades in Maths");
