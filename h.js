@@ -1104,3 +1104,12 @@ const calculator = (number1, number2, callback) => {
 const resultCalculator = (result) => console.log(`The result is ${result}`);
 
 calculator(5, 7, resultCalculator);
+
+class Book {
+  constructor(author, title) {
+    this.author = author;
+    this.title = title;
+  }
+}
+
+const book1 = new Book();
