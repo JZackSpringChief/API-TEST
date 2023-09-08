@@ -1155,32 +1155,100 @@
 
 // myPlaylist.play();
 
-class Customer {
+// class Customer {
+//   constructor(name) {
+//     this.name = name;
+//   }
+// }
+// const cust1 = new Customer("Sally");
+// console.log(cust1);
+
+// class Email {
+//   constructor(address) {
+//     this.address = address;
+//   }
+// }
+// const email1 = new Email("joe@test.com");
+// const email2 = new Email("sally@mail.com");
+// console.log(email1);
+// console.log(email2);
+
+// class Phone {
+//   constructor(number) {
+//     this.number = number;
+//     this.doNotCall = false;
+//   }
+// }
+// const phone1 = new Phone("3455556632");
+// const phone2 = new Phone("4685559441");
+// phone1.doNotCall = true;
+// console.log(phone1);
+// console.log(phone2);
+
+// class Plane {
+//   constructor(model, mph) {
+//     this.model = model;
+//     this.mph = mph;
+//   }
+// }
+// const plane1 = new Plane("747", 543);
+// const plane2 = new Plane("737", 500);
+// const plane3 = new Plane("515", 567);
+
+// class Account {
+//   constructor(name, number) {
+//     this.name = name;
+//     this.number = number;
+//     this.active = true;
+//   }
+// }
+// const account1 = new Account("Bob's Supplies", 1);
+// const account2 = new Account("Tara Consulting", 2);
+
+// class Dog {
+//   constructor(name, breed) {
+//     this.name = name;
+//     this.breed = breed;
+//   }
+// }
+// const dog1 = new Dog("Bruce", "Golden");
+// const dog2 = new Dog("Toby", "Poodle");
+// console.log(dog1);
+// console.log(dog2);
+
+// class Elevator {
+//   constructor() {
+//     this.floor = 0;
+//   }
+//   goToFloor(floor) {
+//     this.floor = floor;
+//     console.log(this.floor);
+//   }
+// }
+// const elevator1 = new Elevator();
+// const elevator2 = new Elevator();
+// // elevator1.floor = 3;
+// // elevator3.floor = 1;
+// elevator1.goToFloor(3);
+// elevator2.goToFloor(5);
+
+// class Song {
+//   constructor() {
+//     this.title = "";
+//   }
+//   play() {
+//     console.log("playing " + this.title);
+//   }
+// }
+// const song1 = new Song();
+// song1.title = "Remember";
+// song1.play();
+
+class Animal {
   constructor(name) {
     this.name = name;
   }
 }
-const cust1 = new Customer("Sally");
-console.log(cust1);
-
-class Email {
-  constructor(address) {
-    this.address = address;
-  }
-}
-const email1 = new Email("joe@test.com");
-const email2 = new Email("sally@mail.com");
-console.log(email1);
-console.log(email2);
-
-class Phone {
-  constructor(number) {
-    this.number = number;
-    this.doNotCall = false;
-  }
-}
-const phone1 = new Phone("3455556632");
-const phone2 = new Phone("4685559441");
-phone1.doNotCall = true;
-console.log(phone1);
-console.log(phone2);
+class Dog extends Animal {}
+const dog = new Dog("Pug");
+console.log(dog);
