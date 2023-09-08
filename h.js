@@ -1131,3 +1131,12 @@ class VirtualPet {
 }
 const pet = new VirtualPet("Tom");
 pet.eat("treats");
+
+class Playlist {
+  constructor() {
+    this.songs = [];
+  }
+  addSong(song) {
+    this.songs.push(song);
+  }
+}
