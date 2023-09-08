@@ -1112,4 +1112,22 @@ class Book {
   }
 }
 
-const book1 = new Book();
+const book1 = new Book("Leo Tolstoy", "War and Peace");
+const book2 = new Book("Dr. Seuss", "Oh, the Places You'll Go!");
+console.log(book1);
+console.log(book2);
+
+class VirtualPet {
+  constructor(name) {
+    this.name = name;
+  }
+  eat(food) {
+    if (food === "treats") {
+      console.log("nom nom");
+    } else {
+      console.log("discard");
+    }
+  }
+}
+const pet = new VirtualPet("Tom");
+pet.eat("treats");
