@@ -944,20 +944,45 @@
 //   console.log("Muted chat");
 // }, 1500);
 
+// let count = 0;
+// let intervalID = null;
+
+// function makeBet() {
+//   if (count < 2) {
+//     count++;
+//     console.log("New Bet");
+//   } else {
+//     clearInterval(intervalID);
+//     console.log("The interval was cleared after 2 bets");
+//   }
+// }
+
+// function start() {
+//   intervalID = setInterval(makeBet, 500);
+// }
+// start();
+
+// const checkOffer = () => console.log("New Offer");
+// const intervalID = setInterval(checkOffer, 400);
+// setTimeout(() => {
+//   clearInterval(intervalID);
+//   console.log("Stop offers after 1300 ms.");
+// }, 1300);
+
 let count = 0;
 let intervalID = null;
 
-function makeBet() {
+function checkLocation() {
   if (count < 2) {
     count++;
-    console.log("New Bet");
+    console.log("Track Lions");
   } else {
     clearInterval(intervalID);
-    console.log("The interval was cleared after 2 bets");
+    console.log("Turn off tracking");
   }
 }
 
 function start() {
-  intervalID = setInterval(makeBet, 500);
+  intervalID = setInterval(checkLocation, 500);
 }
 start();
