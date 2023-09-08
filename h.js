@@ -1139,4 +1139,18 @@ class Playlist {
   addSong(song) {
     this.songs.push(song);
   }
+  play() {
+    for (let i = 0; i < this.song.length; i++) {
+      console.log(this.song[i]);
+    }
+  }
+  remove() {
+    this.songs.pop();
+  }
 }
+
+const myPlaylist = new Playlist();
+
+myPlaylist.addSong("Alright");
+
+myPlaylist.play();
