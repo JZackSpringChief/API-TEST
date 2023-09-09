@@ -1300,24 +1300,32 @@
 // warrior.receiveDamage();
 // warrior.attack();
 
-class Creature {
-  constructor(isGood) {
-    this.isGood = isGood;
+// class Creature {
+//   constructor(isGood) {
+//     this.isGood = isGood;
+//   }
+// }
+// class Dragon extends Creature {}
+// const MUSHU = new Dragon(true);
+// console.log(MUSHU);
+
+// class Tool {
+//   constructor(action) {
+//     this.action = action;
+//   }
+//   use() {
+//     console.log("Starting to " + this.action);
+//   }
+// }
+
+// class Drill extends Tool {}
+// const tool1 = new Drill("drill");
+// tool1.use();
+
+class Car {
+  constructor(year, engine) {
+    this.year = year;
+    this.engine = engine;
   }
 }
-class Dragon extends Creature {}
-const MUSHU = new Dragon(true);
-console.log(MUSHU);
-
-class Tool {
-  constructor(action) {
-    this.action = action;
-  }
-  use() {
-    console.log("Starting to " + this.action);
-  }
-}
-
-class Drill extends Tool {}
-const tool1 = new Drill("drill");
-tool1.use();
+const myCar = new Car(2021, "V8");
