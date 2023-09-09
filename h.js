@@ -1389,25 +1389,52 @@
 // const pdf1 = new Pdf();
 // pdf1.save();
 
-class Employee {
-  work() {
-    console.log("Clocking in");
-  }
-}
-class Server extends Employee {
-  work() {
-    super.work();
-    console.log("Time to take orders");
-  }
-}
-const alex = new Server();
-alex.work();
+// class Employee {
+//   work() {
+//     console.log("Clocking in");
+//   }
+// }
+// class Server extends Employee {
+//   work() {
+//     super.work();
+//     console.log("Time to take orders");
+//   }
+// }
+// const alex = new Server();
+// alex.work();
 
-class Car {
-  constructor(year, engine) {
-    this.year = year;
-    this.engine = engine;
+// class Car {
+//   constructor(year, engine) {
+//     this.year = year;
+//     this.engine = engine;
+//   }
+// }
+// const myCar = new Car(2021, "V8");
+// const oldTimer = new Car(1980, "diesel");
+
+class Rectangle {
+  constructor(width, height) {
+    this.width = width;
+    this.height = height;
   }
 }
-const myCar = new Car(2021, "V8");
-const oldTimer = new Car(1980, "diesel");
+class Square extends Rectangle {
+  constructor(side) {
+    super(side, side);
+  }
+}
+
+class Tool {
+  constructor(brand, cost) {
+    this.brand = brand;
+    this.cost = cost;
+  }
+}
+class Saw extends Tool {
+  constructor(brand, cost, blade) {
+    super(brand, cost, blade);
+    this.blade = blade;
+  }
+}
+const jigsaw = new Saw("ABC", 99, "small");
+console.log(jigsaw);
