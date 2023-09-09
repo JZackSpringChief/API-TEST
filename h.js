@@ -1258,16 +1258,41 @@ class Human {
     this.weapon = weapon;
     this.health = 100;
   }
+  attack() {
+    console.log("Swing " + this.weapon);
+  }
   receiveDamage() {
     this.health = this.health - 10;
   }
 }
+
+//overriding oosd
 class Wizard extends Human {
+  attack() {
+    super.attack();
+    console.log("Alakazam!");
+  }
   receiveDamage() {
     this.health = this.health - 5;
   }
 }
+class Warrior extends Human {
+  attack() {
+    super.attack();
+  }
+  receiveDamage() {
+    this.health = this.health - 3;
+  }
+}
+
 const wizard = new Wizard("staff");
 console.log(wizard.health);
 wizard.receiveDamage();
 console.log(wizard.health);
+wizard.attack();
+
+const warrior = new Warrior("sword");
+console.log(warrior.health);
+warrior.receiveDamage();
+console.log(warrior.health);
+warrior.attack();
