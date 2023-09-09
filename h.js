@@ -1330,61 +1330,84 @@
 // }
 // const myCar = new Car(2021, "V8");
 
-class Animal {
-  pet() {
-    console.log("growl");
-  }
-}
-class Cat extends Animal {
-  pet() {
-    console.log("Prrrr");
-  }
-}
-const mindy = new Cat();
-mindy.pet();
+// class Animal {
+//   pet() {
+//     console.log("growl");
+//   }
+// }
+// class Cat extends Animal {
+//   pet() {
+//     console.log("Prrrr");
+//   }
+// }
+// const mindy = new Cat();
+// mindy.pet();
 
-class Officer {
-  duty() {
-    console.log("Protect and serve.");
-  }
-}
-class Detective extends Officer {
-  duty() {
-    console.log("Interview witnesses");
-  }
-}
-const sherlock = new Detective();
-sherlock.duty();
+// class Officer {
+//   duty() {
+//     console.log("Protect and serve.");
+//   }
+// }
+// class Detective extends Officer {
+//   duty() {
+//     console.log("Interview witnesses");
+//   }
+// }
+// const sherlock = new Detective();
+// sherlock.duty();
 
-class Workout {
-  sets() {
-    console.log("10 reps done");
-  }
-}
-class Bench extends Workout {
-  sets() {
-    console.log("7 reps done");
-  }
-}
-class Squat extends Workout {
-  sets() {
-    console.log("5 reps done");
-  }
-}
-exercise1 = new Bench();
-exercise2 = new Squat();
-exercise1.sets();
-exercise2.sets();
+// class Workout {
+//   sets() {
+//     console.log("10 reps done");
+//   }
+// }
+// class Bench extends Workout {
+//   sets() {
+//     console.log("7 reps done");
+//   }
+// }
+// class Squat extends Workout {
+//   sets() {
+//     console.log("5 reps done");
+//   }
+// }
+// exercise1 = new Bench();
+// exercise2 = new Squat();
+// exercise1.sets();
+// exercise2.sets();
 
-class Document {
-  save() {
-    console.log("Writing to disk");
+// class Document {
+//   save() {
+//     console.log("Writing to disk");
+//   }
+// }
+// class Pdf extends Document {
+//   save() {
+//     super.save();
+//   }
+// }
+// const pdf1 = new Pdf();
+// pdf1.save();
+
+class Employee {
+  work() {
+    console.log("Clocking in");
   }
 }
-class Pdf extends Document {
-  save() {
-    super.save();
+class Server extends Employee {
+  work() {
+    super.work();
+    console.log("Time to take orders");
   }
 }
-const pdf1 = new Pdf();
-pdf1.save();
+const alex = new Server();
+alex.work();
+
+class Car {
+  constructor(year, engine) {
+    this.year = year;
+    this.engine = engine;
+  }
+}
+const myCar = new Car(2021, "V8");
+const oldTimer = new Car(1980, "diesel");
