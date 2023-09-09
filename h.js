@@ -1253,49 +1253,71 @@
 // const dog = new Dog("Pug");
 // console.log(dog);
 
-class Human {
-  constructor(weapon) {
-    this.weapon = weapon;
-    this.health = 100;
+// class Human {
+//   constructor(weapon) {
+//     this.weapon = weapon;
+//     this.health = 100;
+//   }
+//   attack() {
+//     console.log("Swing " + this.weapon);
+//   }
+//   receiveDamage() {
+//     this.health = this.health - 10;
+//   }
+// }
+
+// //overriding oosd
+// class Wizard extends Human {
+//   attack() {
+//     super.attack();
+//     console.log("Alakazam!");
+//   }
+//   receiveDamage() {
+//     this.health = this.health - 5;
+//   }
+// }
+// class Warrior extends Human {
+//   constructor(weapon, warCry) {
+//     super(weapon);
+//     this.warCry = warCry;
+//   }
+//   receiveDamage() {
+//     this.health = this.health - 3;
+//   }
+//   attack() {
+//     super.attack();
+//     console.log(this.warCry);
+//   }
+// }
+
+// const wizard = new Wizard("staff");
+// console.log(wizard.health);
+// wizard.receiveDamage();
+// console.log(wizard.health);
+// wizard.attack();
+
+// const warrior = new Warrior("sword", "DIE!!!");
+// warrior.receiveDamage();
+// warrior.attack();
+
+class Creature {
+  constructor(isGood) {
+    this.isGood = isGood;
   }
-  attack() {
-    console.log("Swing " + this.weapon);
+}
+class Dragon extends Creature {}
+const MUSHU = new Dragon(true);
+console.log(MUSHU);
+
+class Tool {
+  constructor(action) {
+    this.action = action;
   }
-  receiveDamage() {
-    this.health = this.health - 10;
+  use() {
+    console.log("Starting to " + this.action);
   }
 }
 
-//overriding oosd
-class Wizard extends Human {
-  attack() {
-    super.attack();
-    console.log("Alakazam!");
-  }
-  receiveDamage() {
-    this.health = this.health - 5;
-  }
-}
-class Warrior extends Human {
-  constructor(weapon, warCry) {
-    super(weapon);
-    this.warCry = warCry;
-  }
-  receiveDamage() {
-    this.health = this.health - 3;
-  }
-  attack() {
-    super.attack();
-    console.log(this.warCry);
-  }
-}
-
-const wizard = new Wizard("staff");
-console.log(wizard.health);
-wizard.receiveDamage();
-console.log(wizard.health);
-wizard.attack();
-
-const warrior = new Warrior("sword", "DIE!!!");
-warrior.receiveDamage();
-warrior.attack();
+class Drill extends Tool {}
+const tool1 = new Drill("drill");
+tool1.use();
