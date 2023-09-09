@@ -1277,11 +1277,16 @@ class Wizard extends Human {
   }
 }
 class Warrior extends Human {
-  attack() {
-    super.attack();
+  constructor(weapon, warCry) {
+    super(weapon);
+    this.warCry = warCry;
   }
   receiveDamage() {
     this.health = this.health - 3;
+  }
+  attack() {
+    super.attack();
+    console.log(this.warCry);
   }
 }
 
@@ -1291,8 +1296,6 @@ wizard.receiveDamage();
 console.log(wizard.health);
 wizard.attack();
 
-const warrior = new Warrior("sword");
-console.log(warrior.health);
+const warrior = new Warrior("sword", "DIE!!!");
 warrior.receiveDamage();
-console.log(warrior.health);
 warrior.attack();
