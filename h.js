@@ -1412,29 +1412,51 @@
 // const myCar = new Car(2021, "V8");
 // const oldTimer = new Car(1980, "diesel");
 
-class Rectangle {
-  constructor(width, height) {
-    this.width = width;
-    this.height = height;
-  }
-}
-class Square extends Rectangle {
-  constructor(side) {
-    super(side, side);
-  }
-}
+// class Rectangle {
+//   constructor(width, height) {
+//     this.width = width;
+//     this.height = height;
+//   }
+// }
+// class Square extends Rectangle {
+//   constructor(side) {
+//     super(side, side);
+//   }
+// }
 
-class Tool {
-  constructor(brand, cost) {
-    this.brand = brand;
-    this.cost = cost;
+// class Tool {
+//   constructor(brand, cost) {
+//     this.brand = brand;
+//     this.cost = cost;
+//   }
+// }
+// class Saw extends Tool {
+//   constructor(brand, cost, blade) {
+//     super(brand, cost, blade);
+//     this.blade = blade;
+//   }
+// }
+// const jigsaw = new Saw("ABC", 99, "small");
+// console.log(jigsaw);
+
+class Vehicle {
+  constructor(make, model) {
+    this.make = make;
+    this.model = model;
+  }
+  start() {
+    console.log("Starting " + this.make + " " + this.model);
   }
 }
-class Saw extends Tool {
-  constructor(brand, cost, blade) {
-    super(brand, cost, blade);
-    this.blade = blade;
+class Boat extends Vehicle {
+  constructor(make, model, type) {
+    super(make, model);
+    this.type = type;
+  }
+  start() {
+    super.start();
+    console.log(this.type + " Boat on the water");
   }
 }
-const jigsaw = new Saw("ABC", 99, "small");
-console.log(jigsaw);
+const powerboat = new Boat("SEA RAY", "L650", "Power");
+powerboat.start();
