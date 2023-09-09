@@ -1439,24 +1439,43 @@
 // const jigsaw = new Saw("ABC", 99, "small");
 // console.log(jigsaw);
 
-class Vehicle {
-  constructor(make, model) {
-    this.make = make;
-    this.model = model;
-  }
-  start() {
-    console.log("Starting " + this.make + " " + this.model);
+// class Vehicle {
+//   constructor(make, model) {
+//     this.make = make;
+//     this.model = model;
+//   }
+//   start() {
+//     console.log("Starting " + this.make + " " + this.model);
+//   }
+// }
+// class Boat extends Vehicle {
+//   constructor(make, model, type) {
+//     super(make, model);
+//     this.type = type;
+//   }
+//   start() {
+//     super.start();
+//     console.log(this.type + " Boat on the water");
+//   }
+// }
+// const powerboat = new Boat("SEA RAY", "L650", "Power");
+// powerboat.start();
+
+class Scooter {
+  constructor(rider) {
+    this.rider = rider;
   }
 }
-class Boat extends Vehicle {
-  constructor(make, model, type) {
-    super(make, model);
-    this.type = type;
+class ElectricScooter extends Scooter {
+  constructor(rider, battery) {
+    super(rider);
+    this.battery = battery;
   }
-  start() {
-    super.start();
-    console.log(this.type + " Boat on the water");
+  ride() {
+    console.log("Hi " + this.rider + ". Battery life left: " + this.battery);
   }
 }
-const powerboat = new Boat("SEA RAY", "L650", "Power");
-powerboat.start();
+const lime = new ElectricScooter("Bob", "45%");
+const bird = new ElectricScooter("Yana", "89%");
+lime.ride();
+bird.ride();
