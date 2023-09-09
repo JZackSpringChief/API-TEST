@@ -1244,11 +1244,30 @@
 // song1.title = "Remember";
 // song1.play();
 
-class Animal {
-  constructor(name) {
-    this.name = name;
+// class Animal {
+//   constructor(name) {
+//     this.name = name;
+//   }
+// }
+// class Dog extends Animal {}
+// const dog = new Dog("Pug");
+// console.log(dog);
+
+class Human {
+  constructor(weapon) {
+    this.weapon = weapon;
+    this.health = 100;
+  }
+  receiveDamage() {
+    this.health = this.health - 10;
   }
 }
-class Dog extends Animal {}
-const dog = new Dog("Pug");
-console.log(dog);
+class Wizard extends Human {
+  receiveDamage() {
+    this.health = this.health - 5;
+  }
+}
+const wizard = new Wizard("staff");
+console.log(wizard.health);
+wizard.receiveDamage();
+console.log(wizard.health);
