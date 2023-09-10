@@ -23,3 +23,5 @@ to define grid areas we use "grid-template-areas"
 we use "justify-items" to align grid items along the row axis
 
 javascript event handlers for more help refer to nodes
+
+git add-commit -m "enter a comment" to make add an commit 1 step instead of 2
