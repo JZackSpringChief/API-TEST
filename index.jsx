@@ -1,21 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
-const PopupNotice = (props) => {
+const Review = (props) => {
+  const [liked, setLiked] = useState(props.liked);
+
+  const addLike = () => {
+    setLiked(true);
+  };
+  const removeLike = () => {
+    setLiked(false);
+  };
+
   return (
     <div>
-      {props.children}
-      {props.message != null && <p>{props.message}</p>}
+      <p>Make sure to add a like, if you can!</p>
+      {!liked ? (
+        //complete code below
+        <button onClick={addLike}>Like</button>
+      ) : (
+        <button onClick={removeLike}>Remove Like</button>
+      )}
     </div>
   );
 };
 
-ReactDOM.render(
-  <PopupNotice message="Make sure to stay warm and safe!">
-    <h3>The cold season is coming in!</h3>
-    <h5>We're expecting a cold front later this evening</h5>
-  </PopupNotice>,
-  document.getElementById("root")
-);
+ReactDOM.render(<Review liked={false} />, document.getElementById("root"));
 
-export default PopupNotice;
+export default Review;
