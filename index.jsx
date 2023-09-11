@@ -1,8 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-const content = <h1>My first react content</h1>;
+const App = () => {
+  return <p>My first ES6 function rewrite is complete!</p>;
+};
 
-ReactDOM.render(document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));
 
-export default content;
+export default App;
