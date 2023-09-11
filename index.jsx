@@ -1,16 +1,34 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-const Country = (props) => {
+const App = () => {
+  const [completed, toggleComplete] = useState(false);
+
+  let text = "I'm still working on my tasks.",
+    buttonText = "Declare complete";
+  if (completed) {
+    text = "I've completed the task!";
+    buttonText = "Declare incomplete";
+  }
+
   return (
     <div>
-      <h1>France</h1>
-      <p> The capital is Paris</p>
-      <img scr="https://mimo.app/i/eiffel.png" />
+      <h1>Corporate Employee Brother Tracker</h1>
+      <p>Are you done with your tasks?</p>
+      <button
+        onClick={() => {
+          toggleComplete(!completed);
+        }}
+      >
+        {buttonText}
+      </button>
+      <p>
+        <strong>
+          <i>{text}</i>
+        </strong>
+      </p>
     </div>
   );
 };
 
-ReactDOM.render(<Country />, document.getElementById("root"));
-
-export default Country;
+ReactDOM.render(<App />, document.getElementById("root"));
