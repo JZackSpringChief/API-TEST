@@ -1,27 +1,27 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-const BatteryManager = (props) => {
-  var batReport;
-  if (props.battery < 20) {
-    batReport = <p>Please charge me</p>;
-  } else if (props.battery < 40) {
-    batReport = <p>I may need a charge soon</p>;
-  } else {
-    batReport = <p>I have enough power</p>;
-  }
+const CustomInput = (props) => {
+  let bColor = props.error ? "red" : "lightgray";
 
   return (
     <div>
-      <h3>Battery Manager</h3>
-      {batReport}
+      <input
+        type="text"
+        value={props.value}
+        onChange={props.onChange}
+        style={{ borderColor: bColor }}
+      />
     </div>
   );
 };
 
 ReactDOM.render(
-  <BatteryManager battery={30} />,
+  <CustomInput
+    error="Something is wrong"
+    value="This must have a red border"
+  />,
   document.getElementById("root")
 );
 
-export default BatteryManager;
+export default CustomInput;
