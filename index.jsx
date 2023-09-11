@@ -1,34 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
-const App = () => {
-  const [completed, toggleComplete] = useState(false);
+const Counter = () => {
+  const [count, setCount] = useState(0);
 
-  let text = "I'm still working on my tasks.",
-    buttonText = "Declare complete";
-  if (completed) {
-    text = "I've completed the task!";
-    buttonText = "Declare incomplete";
+  function Increment() {
+    setCount(count + 1);
   }
 
   return (
     <div>
-      <h1>Corporate Employee Brother Tracker</h1>
-      <p>Are you done with your tasks?</p>
-      <button
-        onClick={() => {
-          toggleComplete(!completed);
-        }}
-      >
-        {buttonText}
+      <h1>The Gazillionth Counter</h1>
+      <label for="button">The Internet's full of counters, aren't they?</label>
+      <button id="button" onClick={Increment}>
+        +1
       </button>
-      <p>
-        <strong>
-          <i>{text}</i>
-        </strong>
-      </p>
+      <h3>{count}</h3>
     </div>
   );
 };
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<Counter />, document.getElementById("root"));
+
+export default Counter;
