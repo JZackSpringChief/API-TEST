@@ -1,15 +1,20 @@
 import React from "react";
-import ReactDOM from "react-dom";
 
-const App = () => {
-  return (
-    <div>
-      <h1>Did You Know?</h1>
-      <p>Adult sea otters typically weigh between 14 and 45 kg.</p>
-    </div>
-  );
+class CarBrands extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { makes: ["Volkswagen", "Ford", "Honda"] };
+  }
 
-  ReactDOM.render(<App />, document.getElementById("root"));
-};
-
-export default App;
+  render() {
+    return (
+      <div>
+        <ul>
+          {this.state.makes.map((make, i) => {
+            return <li key={"make-" + i}>{make}</li>;
+          })}
+        </ul>
+      </div>
+    );
+  }
+}
