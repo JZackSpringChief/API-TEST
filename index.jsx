@@ -1,31 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
-const IsAQuestion = (props) => {
-  const hasQuestionMark =
-    props.query != null && props.query[props.query.length - 1] == "?";
+const Questionnaire = (props) => {
+  const [first, setFirst] = useState("");
+  const [second, setSecond] = useState("");
 
-  let response;
-  if (hasQuestionMark) {
-    response = <p>A question, this is</p>;
+  const updateFirst = (e) => {
+    setFirst(e.target.value);
+  };
+  const updateSecond = (e) => {
+    setSecond(e.target.value);
+  };
+
+  let ending;
+  if (first.length > 0 && second.length < 0) {
+    ending = <button>Submit Form</button>;
   } else {
-    response = <p>A question, this is not</p>;
+    ending = <p>Please answer all the questions above.</p>;
   }
 
   return (
     <div>
-      <h1>Is this a Question??</h1>
+      <h1>Boogle Forms</h1>
       <p>
-        <strong>Question:</strong> <i>{props.query}</i>
+        <strong>What is your favorite computer program/app?</strong>
       </p>
-      {response}
+      <input name="first" type="text" value={first} onChange={updateFirst} />
+      <p>
+        <strong>What computer model do you use?</strong>
+      </p>
+      <input name="second" type="text" value={second} onChange={updateSecond} />
+      {ending}
     </div>
   );
 };
 
-ReactDOM.render(
-  <IsAQuestion query="Is the Moon really made of cheese?" />,
-  document.getElementById("root")
-);
+ReactDOM.render(<Questionnaire />, document.getElementById("root"));
 
-export default IsAQuestion;
+export default Questionnaire;
