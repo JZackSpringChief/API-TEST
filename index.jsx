@@ -1,27 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-const CustomInput = (props) => {
-  let bColor = props.error ? "red" : "lightgray";
-
+const PopupNotice = (props) => {
   return (
     <div>
-      <input
-        type="text"
-        value={props.value}
-        onChange={props.onChange}
-        style={{ borderColor: bColor }}
-      />
+      {props.children}
+      {props.message != null && <p>{props.message}</p>}
     </div>
   );
 };
 
 ReactDOM.render(
-  <CustomInput
-    error="Something is wrong"
-    value="This must have a red border"
-  />,
+  <PopupNotice message="Make sure to stay warm and safe!">
+    <h3>The cold season is coming in!</h3>
+    <h5>We're expecting a cold front later this evening</h5>
+  </PopupNotice>,
   document.getElementById("root")
 );
 
-export default CustomInput;
+export default PopupNotice;
