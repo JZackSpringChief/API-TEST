@@ -1,40 +1,27 @@
-import React, { useState } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 
-const CreateAccount = (props) => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
-  const handleInput = (e) => {
-    if (e.target.name === "email") {
-      setEmail(e.target.value);
-    } else if (e.target.name === "password") {
-      setPassword(e.target.value);
-    }
-  };
-
-  if (props.user != null) {
-    return <p>You are already logged in!</p>;
+const BatteryManager = (props) => {
+  var batReport;
+  if (props.battery < 20) {
+    batReport = <p>Please charge me</p>;
+  } else if (props.battery < 40) {
+    batReport = <p>I may need a charge soon</p>;
+  } else {
+    batReport = <p>I have enough power</p>;
   }
 
   return (
     <div>
-      <p>Email:</p>
-      <input type="email" name="email" value={email} onChange={handleInput} />
-      <p>Password:</p>
-      <input
-        type="password"
-        name="password"
-        value={password}
-        onChange={handleInput}
-      />
+      <h3>Battery Manager</h3>
+      {batReport}
     </div>
   );
 };
 
 ReactDOM.render(
-  <CreateAccount user={{ username: "MeIsJohnDoe" }} />,
+  <BatteryManager battery={30} />,
   document.getElementById("root")
 );
 
-export default CreateAccount;
+export default BatteryManager;
