@@ -1,26 +1,48 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import { Fruits, Vegetables } from "./types.jsx";
 
-const FruitSelector = () => {
-  const [value, setValue] = useState("fruits");
+const NameForm = () => {
+  //Add code below
+  const [firstname, setFirst] = useState("");
+  const [lastname, setLast] = useState("");
 
-  const handleSelect = (event) => {
-    setValue(event.target.value);
+  const handleFirst = (event) => {
+    setFirst(event.target.value);
+  };
+  const handleSecond = (event) => {
+    setLast(event.target.value);
   };
 
   return (
-    <div>
-      <p>Select the plant type you enjoy eating more:</p>
-      <select value={value} onChange={handleSelect}>
-        <option value="fruits">Fruits</option>
-        <option value="vegetables">Vegetables</option>
-      </select>
-      {value == "fruits" ? <Fruits /> : <Vegetables />}
+    <div className="form">
+      <h1>Your Credentials</h1>
+      <div className="form_content">
+        <p>
+          <strong>
+            Please tell us your first and last name, in that order.
+          </strong>
+        </p>
+        <div className="form_row">
+          <input
+            type="text"
+            name="first"
+            value={firstname}
+            onChange={handleFirst}
+            placeholder="First Name"
+          />
+          <input
+            type="text"
+            name="last"
+            value={lastname}
+            onChange={handleSecond}
+            placeholder="Last Name"
+          />
+        </div>
+      </div>
     </div>
   );
 };
 
-ReactDOM.render(<FruitSelector />, document.getElementById("root"));
+ReactDOM.render(<NameForm />, document.getElementById("root"));
 
-export default FruitSelector;
+export default NameForm;
