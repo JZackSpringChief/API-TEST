@@ -1,22 +1,48 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
-const PasswordInput = (props) => {
-  const [password, setPassword] = useState("MyVeryunsecurePass");
-  const handleInput = (e) => {
-    setPassword(e.target.value);
+const UserProfile = (props) => {
+  const [poked, setPoked] = useState(false);
+  const [message, setMessage] = useState("");
+  const [messageSent, setMessageSent] = useState(false);
+
+  const sendPoke = () => {
+    setPoked(true);
   };
+  const handleMessage = (e) => {
+    setMessage(e.target.value);
+  };
+  const sendMessage = () => {
+    setMessageSent(true);
+  };
+
+  const textbox = messageSent ? (
+    <p>Sent!</p>
+  ) : (
+    <div>
+      <input value={message} onChange={handleMessage} />
+      <button name="sendMessage" onClick={sendMessage}>
+        Send a message to Sam
+      </button>
+    </div>
+  );
 
   return (
     <div>
-      <input type="password" value={password} onChange={handleInput} />
-      {password.length < 30 && (
-        <p>Please enter a password equal to or greater than 30 characters</p>
+      <h1>Sammy Jackson</h1>
+      <div>
+        <img src="https://mimo.app/i/earth.png" alt="Sammy's Profile" />
+      </div>
+      {!poked && (
+        <button name="sendPoke" onClick={sendPoke}>
+          Poke Sam
+        </button>
       )}
+      {textbox}
     </div>
   );
 };
 
-ReactDOM.render(<PasswordInput />, document.getElementById("root"));
+ReactDOM.render(<UserProfile />, document.getElementById("root"));
 
-export default PasswordInput;
+export default UserProfile;
