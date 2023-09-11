@@ -1,25 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 
-const Counter = () => {
-  const [count, setCount] = useState(0);
+const Validity = (props) => {
+  const [valid, isValid] = useState(false);
 
-  function Increment() {
-    setCount(count + 1);
-  }
+  useEffect(() => {
+    if (props.user != null && props.user.isAuthenticated) isValid(true);
+    else isValid(false);
+  }, []);
 
-  return (
-    <div>
-      <h1>The Gazillionth Counter</h1>
-      <label for="button">The Internet's full of counters, aren't they?</label>
-      <button id="button" onClick={Increment}>
-        +1
-      </button>
-      <h3>{count}</h3>
-    </div>
-  );
+  return <div>{valid ? props.children : <p>This is an invalid user</p>}</div>;
 };
 
-ReactDOM.render(<Counter />, document.getElementById("root"));
+ReactDOM.render(
+  <Validity user={{ name: "Jill", isAuthenticated: true }}>
+    <h3>Hello, Jill</h3>
+  </Validity>,
+  document.getElementById("root")
+);
 
-export default Counter;
+export default Validity;
