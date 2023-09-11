@@ -1,10 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-const App = () => {
-  return <p>My first ES6 function rewrite is complete!</p>;
+const Country = (props) => {
+  return (
+    <div>
+      <h1>France</h1>
+      <p> The capital is Paris</p>
+      <img scr="https://mimo.app/i/eiffel.png" />
+    </div>
+  );
 };
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<Country />, document.getElementById("root"));
 
-export default App;
+export default Country;
