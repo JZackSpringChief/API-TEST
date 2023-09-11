@@ -1,31 +1,26 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
+import { Fruits, Vegetables } from "./types.jsx";
 
-const Counter = () => {
-  const [count, setCount] = useState(0);
-  const AddCount = () => {
-    setCount(count + 1);
+const FruitSelector = () => {
+  const [value, setValue] = useState("fruits");
+
+  const handleSelect = (event) => {
+    setValue(event.target.value);
   };
-  const SubtractCount = () => {
-    setCount(count - 1);
-  };
+
   return (
-    <div className="counter">
-      <div className="count">
-        <h1>{count}</h1>
-      </div>
-      <div className="buttons">
-        <button name="add" onClick={AddCount}>
-          +
-        </button>
-        <button name="subtract" onClick={SubtractCount}>
-          -
-        </button>
-      </div>
+    <div>
+      <p>Select the plant type you enjoy eating more:</p>
+      <select value={value} onChange={handleSelect}>
+        <option value="fruits">Fruits</option>
+        <option value="vegetables">Vegetables</option>
+      </select>
+      {value == "fruits" ? <Fruits /> : <Vegetables />}
     </div>
   );
 };
 
-ReactDOM.render(<Counter />, document.getElementById("root"));
+ReactDOM.render(<FruitSelector />, document.getElementById("root"));
 
-export default Counter;
+export default FruitSelector;
