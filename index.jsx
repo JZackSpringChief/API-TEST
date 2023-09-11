@@ -1,29 +1,22 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
-const Review = (props) => {
-  const [liked, setLiked] = useState(props.liked);
-
-  const addLike = () => {
-    setLiked(true);
-  };
-  const removeLike = () => {
-    setLiked(false);
+const PasswordInput = (props) => {
+  const [password, setPassword] = useState("MyVeryunsecurePass");
+  const handleInput = (e) => {
+    setPassword(e.target.value);
   };
 
   return (
     <div>
-      <p>Make sure to add a like, if you can!</p>
-      {!liked ? (
-        //complete code below
-        <button onClick={addLike}>Like</button>
-      ) : (
-        <button onClick={removeLike}>Remove Like</button>
+      <input type="password" value={password} onChange={handleInput} />
+      {password.length < 30 && (
+        <p>Please enter a password equal to or greater than 30 characters</p>
       )}
     </div>
   );
 };
 
-ReactDOM.render(<Review liked={false} />, document.getElementById("root"));
+ReactDOM.render(<PasswordInput />, document.getElementById("root"));
 
-export default Review;
+export default PasswordInput;
