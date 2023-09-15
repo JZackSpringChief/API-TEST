@@ -1461,21 +1461,26 @@
 // const powerboat = new Boat("SEA RAY", "L650", "Power");
 // powerboat.start();
 
-class Scooter {
-  constructor(rider) {
-    this.rider = rider;
-  }
+// class Scooter {
+//   constructor(rider) {
+//     this.rider = rider;
+//   }
+// }
+// class ElectricScooter extends Scooter {
+//   constructor(rider, battery) {
+//     super(rider);
+//     this.battery = battery;
+//   }
+//   ride() {
+//     console.log("Hi " + this.rider + ". Battery life left: " + this.battery);
+//   }
+// }
+// const lime = new ElectricScooter("Bob", "45%");
+// const bird = new ElectricScooter("Yana", "89%");
+// lime.ride();
+// bird.ride();
+
+function multiplyNumber(a, b) {
+  return a * b;
 }
-class ElectricScooter extends Scooter {
-  constructor(rider, battery) {
-    super(rider);
-    this.battery = battery;
-  }
-  ride() {
-    console.log("Hi " + this.rider + ". Battery life left: " + this.battery);
-  }
-}
-const lime = new ElectricScooter("Bob", "45%");
-const bird = new ElectricScooter("Yana", "89%");
-lime.ride();
-bird.ride();
+console.log(multiplyNumber(2, 3));
