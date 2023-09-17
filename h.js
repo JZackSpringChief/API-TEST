@@ -1484,3 +1484,18 @@ function multiplyNumber(a, b) {
   return a * b;
 }
 console.log(multiplyNumber(2, 3));
+
+const multiplyNum = (a) => {
+  return a + 4;
+};
+
+class human {
+  constructor(level, name) {
+    this.level = level;
+    this.name = name;
+    this.food = food;
+  }
+  cook() {
+    return `human has man a ${food}`;
+  }
+}
