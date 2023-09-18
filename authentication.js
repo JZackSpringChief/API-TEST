@@ -12,10 +12,4 @@ const authentication = (req, res) => {
 
 router.use(authentication);
 
-router.use((req, res, next) => {
-  console.log("Incoming Request...");
-  console.log(`Request Type: ${req.method}`);
-  next();
-});
-
 export default router;
