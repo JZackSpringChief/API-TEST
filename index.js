@@ -2,6 +2,20 @@ import express from "express";
 
 const app = express();
 const port = 5777;
+app.use(express.json);
+
+const authentication = (req, res) => {
+  if (req.body.role === "Admin") {
+    console.log("Authenticated");
+  } else {
+    console.log("Unauthorized");
+  }
+};
+
+app.use((req, res) => {
+  console.log("Incoming Request...");
+  console.log(`Request Type: ${req.method}`);
+});
 
 app.get("/", (request, response) => {
   console.log(`New request made: ${request.method}`);
