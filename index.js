@@ -11,6 +11,7 @@ app.get("/", (request, response) => {
   } else {
     console.log("Request Denied");
   }
+  response.status(200).send("<p>if you see this it a good ole 200 status</p>");
 });
 
 app.listen(port, () => {
