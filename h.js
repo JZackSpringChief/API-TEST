@@ -1496,6 +1496,8 @@ class human {
     this.food = food;
   }
   cook() {
-    return `human has man a ${food}`;
+    return `human has made a ${food}`;
   }
 }
+
+console.log(object);
