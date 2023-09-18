@@ -18,8 +18,9 @@ app.get("/movies", (req, res) => {
   res.send("You are in the movie directory");
 });
 
-app.get("/movies/:id", (req, res) => {
-  res.send(`im a movie id in id ${req.params.id} in the movie directory`);
+app.get("/movies/:id/:name", (req, res) => {
+  const { id, name } = req.params;
+  res.send(`im a movie id in id ${id} and the ${name} in the movie directory`);
 });
 
 app.listen(port, () => {
