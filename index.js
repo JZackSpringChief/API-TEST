@@ -6,7 +6,7 @@ import authticationRouter from "./authentication.js";
 
 const app = express();
 const port = 5777;
-app.use(express.json);
+app.use(express.json());
 
 app.use((req, res, next) => {
   console.log("Incoming Request...");
